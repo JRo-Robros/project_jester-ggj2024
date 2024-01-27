@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjljbsa7nb1mm"
-path="res://.godot/imported/GameJam2024KingFaces.png-d18253d86234cc37926d57c04c12c96f.ctex"
+uid="uid://cqj7lvjt7n8px"
+path="res://.godot/imported/GameJam2024KingFaces - Copy.png-f32219c4b82375ebb3470f4978c87bd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://King/GameJam2024KingFaces.png"
-dest_files=["res://.godot/imported/GameJam2024KingFaces.png-d18253d86234cc37926d57c04c12c96f.ctex"]
+source_file="res://King/GameJam2024KingFaces - Copy.png"
+dest_files=["res://.godot/imported/GameJam2024KingFaces - Copy.png-f32219c4b82375ebb3470f4978c87bd1.ctex"]
 
 [params]
 
