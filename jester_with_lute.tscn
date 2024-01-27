@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
 [ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
 [ext_resource type="Script" path="res://active_zone.gd" id="3_fcu66"]
-[ext_resource type="AudioStream" uid="uid://cjcksfit2xri8" path="res://assets/test.wav" id="4_scbpb"]
 [ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_d0joa"]
+[ext_resource type="Script" path="res://scripts/music_controller.gd" id="8_d0ck8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3cx"]
 size = Vector2(310, 13)
@@ -40,7 +40,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_oift2"]
 resource_name = "song_1"
-length = 19.0
+length = 33.0
 step = 0.0833
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -49,37 +49,36 @@ tracks/0/path = NodePath("song:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 18.9924),
+"times": PackedFloat32Array(0, 32.7369),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -630), Vector2(0, 3360)]
+"values": [Vector2(0, 0), Vector2(0, 3800)]
 }
-tracks/1/type = "audio"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer")
-tracks/1/interp = 1
+tracks/1/path = NodePath("Lutefretboard:position")
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("4_scbpb")
-}],
-"times": PackedFloat32Array(2.9988)
-}
-tracks/1/use_blend = true
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Lutefretboard:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.9996),
 "transitions": PackedFloat32Array(0.574349, 0.574349),
 "update": 0,
 "values": [Vector2(567, 1058), Vector2(567, 296)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WwiseScripts")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_leorq"]
@@ -116,53 +115,6 @@ shape = SubResource("RectangleShape2D_sp3cx")
 libraries = {
 "": SubResource("AnimationLibrary_leorq")
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
-[node name="song" type="Node2D" parent="."]
-position = Vector2(0, -630)
-
-[node name="pip" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, 380)
-
-[node name="pip2" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, 310)
-action = 2
-
-[node name="pip3" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, 240)
-
-[node name="pip4" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, 100)
-action = 5
-
-[node name="pip5" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, 30)
-action = 6
-
-[node name="pip6" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -40)
-action = 5
-
-[node name="pip7" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -180)
-action = 4
-
-[node name="pip8" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -320)
-action = 7
-
-[node name="pip9" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -460)
-action = 4
-
-[node name="pip10" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -600)
-action = 1
-
-[node name="pip11" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(570, -670)
-action = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -204,6 +156,7 @@ horizontal_alignment = 1
 
 [node name="WwiseScripts" type="Node2D" parent="."]
 position = Vector2(559, 404)
+script = ExtResource("8_d0ck8")
 
 [node name="AkBank" type="AkBank" parent="WwiseScripts"]
 bank = {
@@ -244,6 +197,12 @@ state_value = {
 "id": 875054468,
 "name": "MelodyOFF"
 }
+
+[node name="song" type="Node2D" parent="."]
+position = Vector2(0, -630)
+
+[node name="pip" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(572, -422.362)
 
 [connection signal="area_entered" from="active_zone" to="active_zone" method="_on_area_entered"]
 [connection signal="area_exited" from="active_zone" to="active_zone" method="_on_area_exited"]
