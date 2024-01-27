@@ -202,10 +202,10 @@ layout_mode = 2
 text = "--%"
 horizontal_alignment = 1
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="WwiseScripts" type="Node2D" parent="."]
 position = Vector2(559, 404)
 
-[node name="AkBank" type="AkBank" parent="Node2D"]
+[node name="AkBank" type="AkBank" parent="WwiseScripts"]
 bank = {
 "id": 133642231,
 "name": "General"
@@ -213,18 +213,18 @@ bank = {
 load_on = 1
 unload_on = 3
 
-[node name="AkListener2D" type="AkListener2D" parent="Node2D"]
+[node name="AkListener2D" type="AkListener2D" parent="WwiseScripts"]
 
-[node name="AkLuteMusic" type="AkEvent2D" parent="Node2D"]
+[node name="AkLuteMusic" type="AkEvent2D" parent="WwiseScripts"]
 event = {
 "id": 1320126269,
 "name": "LuteHero_Music"
 }
 stop_on = 3
 
-[node name="AkLuteFlub" type="AkEvent2D" parent="Node2D"]
+[node name="AkLuteFlub" type="AkEvent2D" parent="WwiseScripts"]
 
-[node name="AkMelodyOn" type="AkState" parent="Node2D"]
+[node name="AkMelodyOn" type="AkState" parent="WwiseScripts"]
 state_group = {
 "id": 1040548709,
 "name": "Melody"
@@ -235,7 +235,7 @@ state_value = {
 }
 trigger_on = 1
 
-[node name="AkMelodyOff" type="AkState" parent="Node2D"]
+[node name="AkMelodyOff" type="AkState" parent="WwiseScripts"]
 state_group = {
 "id": 1040548709,
 "name": "Melody"
