@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://crtr3d3vfuj2y"]
+[gd_scene load_steps=10 format=3 uid="uid://crtr3d3vfuj2y"]
 
+[ext_resource type="Script" path="res://King/King.gd" id="1_6p00p"]
 [ext_resource type="Texture2D" uid="uid://bit0hgu8yiykk" path="res://King/GameJam2024KingHeadless.png" id="1_s7wnf"]
 [ext_resource type="Texture2D" uid="uid://cqj7lvjt7n8px" path="res://King/GameJam2024KingFaces - Copy.png" id="2_ahant"]
 
@@ -211,6 +212,7 @@ _data = {
 }
 
 [node name="King" type="Node2D"]
+script = ExtResource("1_6p00p")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
