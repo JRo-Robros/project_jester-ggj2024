@@ -1,6 +1,7 @@
 class_name active_zone extends Area2D
 
 @export var is_active:bool = false
+@export var score_tracker: Node
 
 var active_pips: Dictionary = {}
 
@@ -11,22 +12,26 @@ func _ready():
 
 func handle_press(action):
 	if not is_active: return
-	print('Pressed ', action)
-	print(active_pips)
 	if active_pips.has(action):
-		active_pips[action].queue_free()
+		score_tracker.register_hit()
+		active_pips[action].was_hit()
+	else:
+		score_tracker.register_miss()
 	
 
 func handle_release(action):
 	if not is_active: return
-	print('Released ', action)
 
 
-func _on_body_entered(body):
-	if not body is pip: return
-	active_pips[body.action_name] = body
-	
+func _on_area_entered(area):
+	if not area is pip: return
+	active_pips[area.action_name] = area
 
-func _on_body_exited(body):
-	if not body is pip: return
-	active_pips.erase(body.action_name)
+
+func _on_area_exited(area):
+	if not area is pip: return
+	if not area.has_been_hit:
+		score_tracker.register_miss()
+		area.was_missed()
+	active_pips.erase(area.action_name)
+
