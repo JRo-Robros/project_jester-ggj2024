@@ -1,0 +1,25 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1320126269	LuteHero_Music			\Default Work Unit\LuteHero\LuteHero_Music	
+	1571823810	LuteHero_Flubs			\Default Work Unit\LuteHero\LuteHero_Flubs	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1040548709	Melody			\Default Work Unit\Melody	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Melody			
+	875054468	MelodyOFF	Melody			
+	2796181470	MelodyON	Melody			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	168083517	LH_Flubs04	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs04_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs04		622800
+	227157402	LuteHero - SopRecorder_74bpm_4-4_L8M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LuteHero - SopRecorder_74bpm_4-4_L8M_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\LuteHero - SopRecorder_74bpm_4-4_L8M		6849824
+	237093002	LH_Flubs03	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs03_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs03		622800
+	257578244	LuteHero - TenorRecorder_74bpm_4-4_L8M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LuteHero - TenorRecorder_74bpm_4-4_L8M_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\LuteHero - TenorRecorder_74bpm_4-4_L8M		6849824
+	416330306	LH_Flubs05	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs05_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs05		622800
+	451991333	LH_Flubs02	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs02		622800
+	469742779	LuteHero - Lute_74bpm_4-4_L8M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LuteHero - Lute_74bpm_4-4_L8M_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\LuteHero - Lute_74bpm_4-4_L8M		6849824
+	571126015	LH_Flubs01	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs01_159BB1EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs01		183028
+	665297035	LuteHero - Congas_74bpm_4-4_L8M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LuteHero - Congas_74bpm_4-4_L8M_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\LuteHero - Congas_74bpm_4-4_L8M		6849824
+	701752553	LH_Flubs06	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LH_Flubs06_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs06		622800
+	720154020	LuteHero - ViolaDaGamba_74bpm_4-4_L8M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Linux\SFX\LuteHero - ViolaDaGamba_74bpm_4-4_L8M_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\LuteHero - ViolaDaGamba_74bpm_4-4_L8M		6849824
+

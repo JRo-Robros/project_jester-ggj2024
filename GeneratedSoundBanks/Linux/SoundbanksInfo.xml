@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../GJJ2024</ProjectRoot>
+		<SourceFilesRoot>../../../GJJ2024/.cache/Linux</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../GJJ2024/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="133642231" Type="User" Language="SFX" Hash="{474CFCE7-33BF-79B0-162B-75F956848932}">
+			<ShortName>General</ShortName>
+			<Path>General.bnk</Path>
+			<Media>
+				<File Id="168083517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs04.wav</ShortName>
+					<CachePath>SFX/LH_Flubs04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="227157402" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteHero - SopRecorder_74bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/LuteHero - SopRecorder_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="237093002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs03.wav</ShortName>
+					<CachePath>SFX/LH_Flubs03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="257578244" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteHero - TenorRecorder_74bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/LuteHero - TenorRecorder_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="416330306" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs05.wav</ShortName>
+					<CachePath>SFX/LH_Flubs05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="451991333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs02.wav</ShortName>
+					<CachePath>SFX/LH_Flubs02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="469742779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteHero - Lute_74bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/LuteHero - Lute_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="571126015" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs01.wav</ShortName>
+					<CachePath>SFX/LH_Flubs01_159BB1EA.wem</CachePath>
+				</File>
+				<File Id="665297035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteHero - Congas_74bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/LuteHero - Congas_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="701752553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LH_Flubs06.wav</ShortName>
+					<CachePath>SFX/LH_Flubs06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="720154020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteHero - ViolaDaGamba_74bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/LuteHero - ViolaDaGamba_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1571823810" Name="LuteHero_Flubs">
+					<MediaRefs>
+						<MediaRef Id="168083517"/>
+						<MediaRef Id="237093002"/>
+						<MediaRef Id="416330306"/>
+						<MediaRef Id="451991333"/>
+						<MediaRef Id="571126015"/>
+						<MediaRef Id="701752553"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1320126269" Name="LuteHero_Music">
+					<MediaRefs>
+						<MediaRef Id="227157402"/>
+						<MediaRef Id="257578244"/>
+						<MediaRef Id="469742779"/>
+						<MediaRef Id="665297035"/>
+						<MediaRef Id="720154020"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="1040548709" Name="Melody">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="875054468" Name="MelodyOFF"/>
+						<State Id="2796181470" Name="MelodyON"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A8D980F8-CB43-1CA6-149F-0ADF373053BB}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="865863285" Name="Flubs"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4115515182" Name="MelodyLines"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="1040548709" Name="Melody">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="875054468" Name="MelodyOFF"/>
+						<State Id="2796181470" Name="MelodyON"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{53B24E6E-D591-34EB-C1D6-40F03B47C7D5}</FileHash>
+</SoundBanksInfo>

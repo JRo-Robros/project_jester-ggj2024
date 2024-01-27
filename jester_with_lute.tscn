@@ -202,5 +202,48 @@ layout_mode = 2
 text = "--%"
 horizontal_alignment = 1
 
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(559, 404)
+
+[node name="AkBank" type="AkBank" parent="Node2D"]
+bank = {
+"id": 133642231,
+"name": "General"
+}
+load_on = 1
+unload_on = 3
+
+[node name="AkListener2D" type="AkListener2D" parent="Node2D"]
+
+[node name="AkLuteMusic" type="AkEvent2D" parent="Node2D"]
+event = {
+"id": 1320126269,
+"name": "LuteHero_Music"
+}
+stop_on = 3
+
+[node name="AkLuteFlub" type="AkEvent2D" parent="Node2D"]
+
+[node name="AkMelodyOn" type="AkState" parent="Node2D"]
+state_group = {
+"id": 1040548709,
+"name": "Melody"
+}
+state_value = {
+"id": 2796181470,
+"name": "MelodyON"
+}
+trigger_on = 1
+
+[node name="AkMelodyOff" type="AkState" parent="Node2D"]
+state_group = {
+"id": 1040548709,
+"name": "Melody"
+}
+state_value = {
+"id": 875054468,
+"name": "MelodyOFF"
+}
+
 [connection signal="area_entered" from="active_zone" to="active_zone" method="_on_area_entered"]
 [connection signal="area_exited" from="active_zone" to="active_zone" method="_on_area_exited"]

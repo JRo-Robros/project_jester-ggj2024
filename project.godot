@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Lute Hero"
+run/main_scene="res://jester_with_lute.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -74,7 +75,7 @@ renderer/rendering_method="gl_compatibility"
 
 common_user_settings/base_path="res://GeneratedSoundBanks"
 common_user_settings/startup_language="English(US)"
-common_user_settings/load_init_bank_at_startup=false
+common_user_settings/load_init_bank_at_startup=true
 common_user_settings/suspend_on_focus_loss=false
 common_user_settings/use_soundbank_names=true
 common_user_settings/engine_logging=false

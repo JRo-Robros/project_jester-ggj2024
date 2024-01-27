@@ -46,9 +46,11 @@ class TRIGGERS:
 class BANKS:
 
 	const INIT = 1355168291
+	const GENERAL = 133642231
 
 	const _dict = {
-		"Init": INIT
+		"Init": INIT,
+		"General": GENERAL
 	}
 
 class BUSSES:
