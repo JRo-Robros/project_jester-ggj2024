@@ -6,6 +6,7 @@ class_name lutegame extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var active_zone = $active_zone
 @onready var jester = $Jester
+@onready var luteshake = $luteshake
 
 const PIP = preload("res://pip.tscn")
 
@@ -25,9 +26,10 @@ func start():
 
 	var x = $song/pip.position
 	var space = 94
-	for i in range(0,40):
+	for i in range(0,30):
 		var p = PIP.instantiate()
 		$song.add_child(p)
+		p.action = [0,1,2,3,4,5,6,7].pick_random()
 		p.position = Vector2(x.x, x.y-space)
 		x.y -= space
 		
@@ -55,3 +57,4 @@ func register_miss():
 	percent = hit / (hit + miss)
 	var p_string = round(percent * 100)
 	percent_label.text = "%s %%" % p_string
+	luteshake.play('shake')

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://2ljyt8xji5c0"]
+[gd_scene load_steps=16 format=3 uid="uid://2ljyt8xji5c0"]
 
 [ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
@@ -7,6 +7,68 @@
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="4_qcjkk"]
 [ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_d0joa"]
 [ext_resource type="Script" path="res://scripts/music_controller.gd" id="8_d0ck8"]
+
+[sub_resource type="Animation" id="Animation_i82wx"]
+resource_name = "shake"
+length = 0.3
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(567, 296), Vector2(588, 285), Vector2(567, 296), Vector2(531, 319), Vector2(567, 296), Vector2(597, 311), Vector2(567, 296)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0395753, 0.0, -0.0792301, 0.0, 0.0519487, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g3xeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(567, 296)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ux3pd"]
+_data = {
+"RESET": SubResource("Animation_g3xeh"),
+"shake": SubResource("Animation_i82wx")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3cx"]
 size = Vector2(310, 13)
@@ -131,6 +193,12 @@ _data = {
 script = ExtResource("1_5uvjp")
 streak_label = NodePath("CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StreakLabel")
 percent_label = NodePath("CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PercentLabel")
+
+[node name="luteshake" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Lutefretboard")
+libraries = {
+"": SubResource("AnimationLibrary_ux3pd")
+}
 
 [node name="Lutefretboard" type="Sprite2D" parent="."]
 position = Vector2(567, 1076)

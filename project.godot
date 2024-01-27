@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 InputManager="*res://scripts/input_manager.gd"
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
+[display]
+
+window/size/resizable=false
+
 [gui]
 
 theme/custom="res://new_theme.tres"
