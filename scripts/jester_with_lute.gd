@@ -5,6 +5,9 @@ class_name lutegame extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var active_zone = $active_zone
 
+const PIP = preload("res://pip.tscn")
+
+
 var hit = 0.0
 var miss = 0.0
 var percent = 0.5
@@ -14,12 +17,22 @@ var streak = 0
 func start():
 	visible = true
 	animation_player.play('song_1')
+
+	var x = $song/pip.position
+	var space = 94
+	for i in range(0,40):
+		var p = PIP.instantiate()
+		$song.add_child(p)
+		p.position = Vector2(x.x, x.y-space)
+		x.y -= space
+		
 	await get_tree().create_timer(0.5).timeout
 	active_zone.is_active = true
 
 func stop():
 	visible = false
 	active_zone.is_active = false
+
 
 func register_hit():
 	hit += 1.0

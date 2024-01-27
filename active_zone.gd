@@ -1,7 +1,12 @@
 class_name active_zone extends Area2D
 
+signal bad_note
+signal good_note
+signal missed_note
+
 @export var is_active:bool = false
 @export var score_tracker: Node
+
 
 var active_pips: Dictionary = {}
 
@@ -15,8 +20,10 @@ func handle_press(action):
 	if active_pips.has(action):
 		score_tracker.register_hit()
 		active_pips[action].was_hit()
+		good_note.emit()
 	else:
 		score_tracker.register_miss()
+		bad_note.emit()
 	
 
 func handle_release(action):
@@ -33,5 +40,6 @@ func _on_area_exited(area):
 	if not area.has_been_hit:
 		score_tracker.register_miss()
 		area.was_missed()
+		missed_note.emit()
 	active_pips.erase(area.action_name)
 
