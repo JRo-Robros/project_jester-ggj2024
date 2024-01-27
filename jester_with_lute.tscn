@@ -1,0 +1,206 @@
+[gd_scene load_steps=12 format=3 uid="uid://2ljyt8xji5c0"]
+
+[ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
+[ext_resource type="Texture2D" uid="uid://dcudr2t7slx7t" path="res://assets/jester-starter.png" id="1_qlpjd"]
+[ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
+[ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
+[ext_resource type="Script" path="res://active_zone.gd" id="3_fcu66"]
+[ext_resource type="AudioStream" uid="uid://cjcksfit2xri8" path="res://assets/test.wav" id="4_scbpb"]
+[ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_d0joa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3cx"]
+size = Vector2(310, 13)
+
+[sub_resource type="Animation" id="Animation_472hk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("song:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -630)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lutefretboard:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(567, 1076)]
+}
+
+[sub_resource type="Animation" id="Animation_oift2"]
+resource_name = "song_1"
+length = 19.0
+step = 0.0833
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("song:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 18.9924),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -630), Vector2(0, 3360)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_scbpb")
+}],
+"times": PackedFloat32Array(2.9988)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lutefretboard:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9996),
+"transitions": PackedFloat32Array(0.574349, 0.574349),
+"update": 0,
+"values": [Vector2(567, 1058), Vector2(567, 296)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_leorq"]
+_data = {
+"RESET": SubResource("Animation_472hk"),
+"song_1": SubResource("Animation_oift2")
+}
+
+[node name="with_lute" type="Node2D" node_paths=PackedStringArray("streak_label", "percent_label")]
+script = ExtResource("1_5uvjp")
+streak_label = NodePath("CanvasLayer/Control/MarginContainer/VBoxContainer/StreakLabel")
+percent_label = NodePath("CanvasLayer/Control/MarginContainer/VBoxContainer/PercentLabel")
+
+[node name="Lutefretboard" type="Sprite2D" parent="."]
+position = Vector2(567, 1076)
+texture = ExtResource("2_eefsy")
+
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(894, 282)
+texture = ExtResource("1_qlpjd")
+region_enabled = true
+region_rect = Rect2(101.5, -1.5, 157.5, 250.5)
+
+[node name="active_zone" type="Area2D" parent="." node_paths=PackedStringArray("score_tracker")]
+position = Vector2(559, 404)
+script = ExtResource("3_fcu66")
+is_active = true
+score_tracker = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="active_zone"]
+shape = SubResource("RectangleShape2D_sp3cx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_leorq")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="song" type="Node2D" parent="."]
+position = Vector2(0, -630)
+
+[node name="pip" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, 380)
+
+[node name="pip2" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, 310)
+action = 2
+
+[node name="pip3" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, 240)
+
+[node name="pip4" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, 100)
+action = 5
+
+[node name="pip5" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, 30)
+action = 6
+
+[node name="pip6" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -40)
+action = 5
+
+[node name="pip7" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -180)
+action = 4
+
+[node name="pip8" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -320)
+action = 7
+
+[node name="pip9" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -460)
+action = 4
+
+[node name="pip10" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -600)
+action = 1
+
+[node name="pip11" parent="song" instance=ExtResource("2_tiwvu")]
+position = Vector2(570, -670)
+action = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="StreakLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_d0joa")
+text = "Streak: -"
+
+[node name="PercentLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "--%"
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="active_zone" to="active_zone" method="_on_area_entered"]
+[connection signal="area_exited" from="active_zone" to="active_zone" method="_on_area_exited"]

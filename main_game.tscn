@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cstwqshp2173q"]
 
-[ext_resource type="Texture2D" uid="uid://cgqahi1doyclm" path="res://stage-starter.png" id="1_l6vke"]
+[ext_resource type="Texture2D" uid="uid://cgqahi1doyclm" path="res://assets/stage-starter.png" id="1_l6vke"]
 
 [node name="MainGame" type="Node2D"]
 
