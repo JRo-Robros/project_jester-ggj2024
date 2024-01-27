@@ -1,16 +1,21 @@
 class_name lutegame extends Node2D
 
+
 @export var streak_label: Label
 @export var percent_label: Label
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var active_zone = $active_zone
+@onready var jester = $Jester
 
 const PIP = preload("res://pip.tscn")
 
 
 var hit = 0.0
 var miss = 0.0
-var percent = 0.5
+var percent = 0.5:
+	set(value):
+		jester.set_mood(value)
+		percent = value
 var streak = 0
 
 

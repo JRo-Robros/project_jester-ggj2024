@@ -18,12 +18,27 @@ extends Node2D
 @export var okay_face: int
 @export var good_face: int
 
+@onready var active_zone = $"../active_zone"
+
 # changes from 0 to 1 for 0 to 100% accuracy
 var _mood: float = 1
+
+
+func _ready():
+	active_zone.good_note.connect(change_position)
+	active_zone.bad_note.connect(lute_fail)
+	active_zone.missed_note.connect(lute_fail)
+
 
 func set_mood(m: float):
 	_mood = m
 	update_face()
+
+
+func change_position():
+	var anims: Array = [lute_left, lute_down, lute_right, lute_up]
+	anims.pick_random().call()
+
 
 func update_face():
 	if _mood > good_mood:
