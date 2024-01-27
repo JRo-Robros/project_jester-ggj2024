@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://2ljyt8xji5c0"]
+
+[ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
+[ext_resource type="Texture2D" uid="uid://dcudr2t7slx7t" path="res://assets/jester-starter.png" id="1_qlpjd"]
+[ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
+[ext_resource type="Script" path="res://active_zone.gd" id="3_fcu66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3cx"]
+size = Vector2(310, 13)
+
+[node name="with_lute" type="Node2D"]
+script = ExtResource("1_5uvjp")
+
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(894, 282)
+texture = ExtResource("1_qlpjd")
+region_enabled = true
+region_rect = Rect2(101.5, -1.5, 157.5, 250.5)
+
+[node name="active_zone" type="Area2D" parent="."]
+position = Vector2(559, 404)
+script = ExtResource("3_fcu66")
+is_active = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="active_zone"]
+shape = SubResource("RectangleShape2D_sp3cx")
+metadata/_edit_lock_ = true
+
+[node name="pip_emitter" type="Node2D" parent="."]
+position = Vector2(453, -40)
+
+[node name="pip_emitter2" type="Node2D" parent="."]
+position = Vector2(523, -40)
+
+[node name="pip_emitter3" type="Node2D" parent="."]
+position = Vector2(593, -40)
+
+[node name="pip_emitter4" type="Node2D" parent="."]
+position = Vector2(663, -40)
+
+[node name="pip" parent="." instance=ExtResource("2_tiwvu")]
+position = Vector2(552, -30)
+
+[connection signal="body_entered" from="active_zone" to="active_zone" method="_on_body_entered"]
+[connection signal="body_exited" from="active_zone" to="active_zone" method="_on_body_exited"]
