@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cstwqshp2173q"]
+[gd_scene load_steps=5 format=3 uid="uid://cstwqshp2173q"]
 
-[ext_resource type="Texture2D" uid="uid://cgqahi1doyclm" path="res://assets/stage-starter.png" id="1_l6vke"]
+[ext_resource type="Script" path="res://main_game.gd" id="1_3vdku"]
+[ext_resource type="Texture2D" uid="uid://frh3npavxmt" path="res://assets/stage.png" id="2_f1ivp"]
+[ext_resource type="PackedScene" uid="uid://2ljyt8xji5c0" path="res://jester_with_lute.tscn" id="3_jbpol"]
+[ext_resource type="PackedScene" uid="uid://hk4cy6mix1yk" path="res://main_menu.tscn" id="3_r2ja2"]
 
 [node name="MainGame" type="Node2D"]
+script = ExtResource("1_3vdku")
 
 [node name="Stage" type="Node2D" parent="."]
 
-[node name="Stage-starter" type="Sprite2D" parent="Stage"]
+[node name="Sprite2d" type="Sprite2D" parent="Stage"]
 position = Vector2(577, 326)
-texture = ExtResource("1_l6vke")
+texture = ExtResource("2_f1ivp")
+
+[node name="MainMenu" parent="." instance=ExtResource("3_r2ja2")]
+
+[node name="with_lute" parent="." instance=ExtResource("3_jbpol")]
+visible = false

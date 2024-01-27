@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://2ljyt8xji5c0"]
+[gd_scene load_steps=13 format=3 uid="uid://2ljyt8xji5c0"]
 
 [ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
 [ext_resource type="Texture2D" uid="uid://dcudr2t7slx7t" path="res://assets/jester-starter.png" id="1_qlpjd"]
@@ -36,6 +36,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(567, 1076)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lutefretboard:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_eefsy")]
 }
 
 [sub_resource type="Animation" id="Animation_oift2"]
@@ -81,16 +93,44 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_mrv47"]
+resource_name = "stop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lutefretboard:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("2_eefsy")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("song:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, -630)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_leorq"]
 _data = {
 "RESET": SubResource("Animation_472hk"),
-"song_1": SubResource("Animation_oift2")
+"song_1": SubResource("Animation_oift2"),
+"stop": SubResource("Animation_mrv47")
 }
 
 [node name="with_lute" type="Node2D" node_paths=PackedStringArray("streak_label", "percent_label")]
 script = ExtResource("1_5uvjp")
-streak_label = NodePath("CanvasLayer/Control/MarginContainer/VBoxContainer/StreakLabel")
-percent_label = NodePath("CanvasLayer/Control/MarginContainer/VBoxContainer/PercentLabel")
+streak_label = NodePath("CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StreakLabel")
+percent_label = NodePath("CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PercentLabel")
 
 [node name="Lutefretboard" type="Sprite2D" parent="."]
 position = Vector2(567, 1076)
@@ -105,7 +145,6 @@ region_rect = Rect2(101.5, -1.5, 157.5, 250.5)
 [node name="active_zone" type="Area2D" parent="." node_paths=PackedStringArray("score_tracker")]
 position = Vector2(559, 404)
 script = ExtResource("3_fcu66")
-is_active = true
 score_tracker = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="active_zone"]
@@ -135,20 +174,30 @@ offset_left = -20.0
 grow_horizontal = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="StreakLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="StreakLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_d0joa")
 text = "Streak: -"
 
-[node name="PercentLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="PercentLabel" type="Label" parent="CanvasLayer/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "--%"

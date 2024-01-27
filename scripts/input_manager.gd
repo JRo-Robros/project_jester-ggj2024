@@ -3,6 +3,8 @@ extends Node
 signal action_pressed
 signal action_released
 
+var input_type = "keyboard"
+
 func _process(delta):
 	if Input.is_action_just_pressed("l_up"):
 		action_pressed.emit('l_up')
