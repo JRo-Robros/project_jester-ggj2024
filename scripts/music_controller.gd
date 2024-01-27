@@ -5,6 +5,8 @@ extends Node2D
 
 func _ready():
 	active_zone.bad_note.connect(flub)
+	active_zone.good_note.connect(good)
+	active_zone.missed_note.connect(miss)
 	
 	
 func play():
@@ -17,8 +19,8 @@ func flub():
 
 
 func good():
-	$AkMelodyOn.post_event()
+	$AkMelodyOn.set_state()
 
 
 func miss():
-	$AkMelodyOff.post_event()
+	$AkMelodyOff.set_state()

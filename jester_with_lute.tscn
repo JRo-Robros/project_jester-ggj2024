@@ -176,6 +176,10 @@ event = {
 stop_on = 3
 
 [node name="AkLuteFlub" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 1571823810,
+"name": "LuteHero_Flubs"
+}
 
 [node name="AkMelodyOn" type="AkState" parent="WwiseScripts"]
 state_group = {
@@ -202,7 +206,7 @@ state_value = {
 position = Vector2(0, -630)
 
 [node name="pip" parent="song" instance=ExtResource("2_tiwvu")]
-position = Vector2(572, -422.362)
+position = Vector2(572, -377.362)
 
 [connection signal="area_entered" from="active_zone" to="active_zone" method="_on_area_entered"]
 [connection signal="area_exited" from="active_zone" to="active_zone" method="_on_area_exited"]

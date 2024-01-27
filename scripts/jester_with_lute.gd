@@ -14,7 +14,7 @@ func _ready():
 	animation_player.play('song_1')
 	print(streak_label.text)
 	var x = $song/pip.position
-	var space = 93.4
+	var space = 94
 	for i in range(0,40):
 		var p = PIP.instantiate()
 		$song.add_child(p)
