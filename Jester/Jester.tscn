@@ -1364,7 +1364,7 @@ region_rect = Rect2(64.2769, 100.367, 99.7135, 95.1344)
 texture = ExtResource("3_7mk4w")
 hframes = 3
 vframes = 3
-frame = 3
+frame = 2
 
 [node name="HatLeft" type="Sprite2D" parent="Body/Head"]
 position = Vector2(-38, -44)
