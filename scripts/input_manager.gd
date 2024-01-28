@@ -14,6 +14,7 @@ signal fail
 signal action_pressed
 signal action_released
 signal input_type_changed
+signal dish_music
 
 var input_type = "keyboard":
 	set(value):

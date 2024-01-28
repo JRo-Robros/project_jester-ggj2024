@@ -3,6 +3,7 @@ extends Node2D
 @onready var main_menu = $MainMenu
 @onready var lute_game = $with_lute
 @onready var juggle = $juggle
+@onready var dish_bounce = $DishBounce
 
 
 func _ready():
@@ -11,4 +12,4 @@ func _ready():
 	
 func start_game():
 	InputManager.stop_title.emit()
-	lute_game.start()
+	dish_bounce.start()
