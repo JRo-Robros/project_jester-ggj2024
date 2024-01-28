@@ -12,4 +12,4 @@ func _ready():
 	
 func start_game():
 	InputManager.stop_title.emit()
-	dish_bounce.start()
+	lute_game.start()

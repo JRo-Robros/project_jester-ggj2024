@@ -27,6 +27,7 @@ func start():
 func stop():
 	visible = false
 	dish_spawn_timer.stop()
+	hud.end_screen()
 
 func watch_dish(dish: Dish):
 	dish.bounced.connect(register_hit)

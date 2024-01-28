@@ -8,6 +8,7 @@ var is_active = false:
 		visible = value
 		is_active = value
 var r_or_l = true
+@onready var dish_bounce = $"../DishBounce"
 @onready var right = $RtoL
 @onready var left = $LtoR
 @onready var ball_spawner = $Timer
@@ -39,7 +40,7 @@ func start():
 func stop():
 	ball_spawner.stop()
 	is_active = false
-	hud.end_screen()
+	dish_bounce.start()
 
 func throw():
 	InputManager.throw.emit()
