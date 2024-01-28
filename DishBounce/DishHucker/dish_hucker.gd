@@ -1,11 +1,15 @@
 class_name DishHucker
 extends Node2D
 
-# Dish hucker throws a dish on command
-# TODO: Select a random scene from a set
-
+@onready var animation_player: = $AnimationPlayer as AnimationPlayer
 @onready var dish_spawn_marker: = $DishSpawnPos as Marker2D
 @export var dish_scene: PackedScene
+
+func _ready():
+	animation_player.play("idle")
+
+func throw_animation():
+	animation_player.play("throw")
 
 func huck_dish():
 	var dish: Node2D = dish_scene.instantiate() as Node2D
