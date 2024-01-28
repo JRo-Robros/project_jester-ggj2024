@@ -2,6 +2,15 @@ extends Node
 signal good_note
 signal bad_note
 signal missed_note
+signal play_title
+signal stop_title
+signal lute_intro
+signal juggle_intro
+signal juggle_music
+signal throw
+signal catch
+signal victory
+signal fail	
 signal action_pressed
 signal action_released
 signal input_type_changed

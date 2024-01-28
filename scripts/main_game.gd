@@ -7,7 +7,8 @@ extends Node2D
 
 func _ready():
 	main_menu.game_started.connect(start_game)
-	
+	InputManager.play_title.emit()
 	
 func start_game():
+	InputManager.stop_title.emit()
 	lute_game.start()

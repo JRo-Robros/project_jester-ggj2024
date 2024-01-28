@@ -80,6 +80,15 @@ layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
+[node name="KingLabel" type="Label" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "The King Is Amused!"
+horizontal_alignment = 1
+
 [node name="PercentLabel" type="Label" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2

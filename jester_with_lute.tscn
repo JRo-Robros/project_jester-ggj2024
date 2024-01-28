@@ -265,6 +265,70 @@ state_value = {
 "name": "MelodyOFF"
 }
 
+[node name="AkTitle" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 777890284,
+"name": "MainMenu_Play"
+}
+stop_on = 3
+position = Vector2(-559, -404)
+
+[node name="AkTitleStop" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 2747674870,
+"name": "MainMenu_Stop"
+}
+position = Vector2(-559, -404)
+
+[node name="AkLuteIntro" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 840043798,
+"name": "Lute_Intro"
+}
+position = Vector2(-559, -404)
+
+[node name="AkJuggleIntro" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 2852581702,
+"name": "Juggler_Intro"
+}
+position = Vector2(-559, -404)
+
+[node name="AkJuggleMusic" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 783236646,
+"name": "JugglerMusic"
+}
+position = Vector2(-559, -404)
+
+[node name="AkWhoosh" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 4234308485,
+"name": "Throwing"
+}
+position = Vector2(-559, -404)
+
+[node name="AkCatch" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 1210588850,
+"name": "Catching"
+}
+position = Vector2(-559, -404)
+
+[node name="AkVictory" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 2716678721,
+"name": "Victory"
+}
+position = Vector2(-559, -404)
+
+[node name="AkFail" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 2596272617,
+"name": "Fail"
+}
+position = Vector2(-559, -404)
+
 [node name="song" type="Node2D" parent="."]
 position = Vector2(0, -630)
 

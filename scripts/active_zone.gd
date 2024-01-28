@@ -4,12 +4,14 @@ class_name active_zone extends Area2D
 @export var is_active:bool = false
 @export var score_tracker: Node
 
-
+const LUTEINSTRUCT = preload("res://assets/luteinstruct.png")
+const LUTEJOY = preload("res://assets/lutejoy.png")
 var active_pips: Dictionary = {}
 
 func _ready():
 	InputManager.action_pressed.connect(handle_press)
 	InputManager.action_released.connect(handle_release)
+	InputManager.input_type_changed.connect(input_change)
 
 
 func handle_press(action):
@@ -39,4 +41,7 @@ func _on_area_exited(area):
 		area.was_missed()
 		InputManager.missed_note.emit()
 	active_pips.erase(area.action_name)
+	
+func input_change(v):
+	$"../CanvasLayer/Control/MarginContainer/PanelContainer/VBoxContainer/TextureRect".texture = LUTEINSTRUCT if v == 'keyboard' else LUTEJOY
 

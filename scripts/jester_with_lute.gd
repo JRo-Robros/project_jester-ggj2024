@@ -21,8 +21,10 @@ func _ready():
 	active_zone.score_tracker = hud
 
 func start():
+	InputManager.lute_intro.emit()
 	$CanvasLayer.visible = true
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(4).timeout
 	$CanvasLayer.visible = false
 	visible = true
 	animation_player.play('song_1')

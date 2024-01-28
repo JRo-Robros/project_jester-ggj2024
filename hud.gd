@@ -7,6 +7,7 @@ var hit = 0.0
 var miss = 0.0
 var percent = 0.5:
 	set(value):
+		%KingLabel.text = "The King is Amused!!" if value > 0.6 else "The King is NOT Amused."
 		jester.set_mood(value)
 		king.set_mood(value)
 		percent = value
@@ -38,3 +39,11 @@ func register_miss():
 
 func new_best(value):
 	%BestLabel.text = "Best Streak %s" % value
+
+
+func end_screen():
+	visible = true;
+	if percent > 0.6:
+		InputManager.victory.emit()
+	else:
+		InputManager.fail.emit()

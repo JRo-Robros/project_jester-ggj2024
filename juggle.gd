@@ -24,20 +24,25 @@ func _ready():
 	
 
 func start():
+	InputManager.juggle_intro.emit()
 	$CanvasLayer.visible = true
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(3.0).timeout
+	InputManager.juggle_music.emit()
 	$CanvasLayer.visible = false
-	round_timer.start(30)
+	round_timer.start(31)
 	ball_spawner.start()
 	is_active = true
+	
 
 
 func stop():
 	ball_spawner.stop()
 	is_active = false
-	hud.show()
+	hud.end_screen()
 
 func throw():
+	InputManager.throw.emit()
 	r_or_l = not r_or_l
 	var type = [0,1,2,3].pick_random() if r_or_l else [4,5,6,7].pick_random()
 	var b = Ball.new(type, r_or_l)
@@ -56,6 +61,7 @@ func handle_press(action: String):
 				if action == i.action_name:
 					i.was_hit()
 					hud.register_hit()
+					InputManager.catch.emit()
 					InputManager.good_note.emit()
 				else:
 					hud.register_miss()
@@ -67,6 +73,7 @@ func handle_press(action: String):
 				if action == i.action_name:
 					i.was_hit()
 					hud.register_hit()
+					InputManager.catch.emit()					
 					InputManager.good_note.emit()
 				else:
 					hud.register_miss()
