@@ -110,56 +110,74 @@ curve = SubResource("Curve2D_saabe")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Keys" type="Sprite2D" parent="."]
-position = Vector2(762, 435)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-
-[node name="Keys2" type="Sprite2D" parent="."]
-position = Vector2(714, 479)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 1
-
-[node name="Keys3" type="Sprite2D" parent="."]
-position = Vector2(762, 518)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 2
-
-[node name="Keys4" type="Sprite2D" parent="."]
-position = Vector2(806, 479)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 3
-
-[node name="Keys5" type="Sprite2D" parent="."]
-position = Vector2(904.5, 433.5)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 5
-
-[node name="Keys6" type="Sprite2D" parent="."]
-position = Vector2(856.5, 477.5)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 4
-
-[node name="Keys7" type="Sprite2D" parent="."]
-position = Vector2(904.5, 516.5)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 6
-
-[node name="Keys8" type="Sprite2D" parent="."]
-position = Vector2(948.5, 477.5)
-texture = ExtResource("3_5mgw6")
-hframes = 8
-frame = 7
-
 [node name="RoundTimer" type="Timer" parent="."]
 wait_time = 30.0
 one_shot = true
+
+[node name="keys" type="Node2D" parent="."]
+
+[node name="Keys" type="Sprite2D" parent="keys"]
+position = Vector2(757, 430)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+
+[node name="Keys2" type="Sprite2D" parent="keys"]
+position = Vector2(714, 479)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 1
+
+[node name="Keys3" type="Sprite2D" parent="keys"]
+position = Vector2(758, 528)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 2
+
+[node name="Keys4" type="Sprite2D" parent="keys"]
+position = Vector2(806, 479)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 3
+
+[node name="Keys5" type="Sprite2D" parent="keys"]
+position = Vector2(915, 434)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 5
+
+[node name="Keys6" type="Sprite2D" parent="keys"]
+position = Vector2(866, 483)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 4
+
+[node name="Keys7" type="Sprite2D" parent="keys"]
+position = Vector2(913, 530)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 6
+
+[node name="Keys8" type="Sprite2D" parent="keys"]
+position = Vector2(962, 481)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 7
 
 [connection signal="area_exited" from="HandR" to="." method="_on_hand_r_area_exited"]
 [connection signal="area_exited" from="HandL" to="." method="_on_hand_l_area_exited"]

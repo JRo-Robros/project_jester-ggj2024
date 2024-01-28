@@ -23,7 +23,6 @@ var best_streak = 0:
 func register_hit():
 	hit += 1.0
 	streak += 1.0
-	%StreakLabel.text = "%s Note Streak" % streak
 	percent = hit / (hit + miss)
 	var p_string = round(percent * 100)
 	%PercentLabel.text = "%s %%" % p_string
@@ -32,7 +31,6 @@ func register_hit():
 func register_miss():
 	miss += 1.0
 	streak = 0.0
-	%StreakLabel.text = "%s Note Streak" % streak
 	percent = hit / (hit + miss)
 	var p_string = round(percent * 100)
 	%PercentLabel.text = "%s %%" % p_string

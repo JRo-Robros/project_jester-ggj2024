@@ -4,8 +4,12 @@ signal bad_note
 signal missed_note
 signal action_pressed
 signal action_released
+signal input_type_changed
 
-var input_type = "keyboard"
+var input_type = "keyboard":
+	set(value):
+		input_type_changed.emit(value)
+		input_type = value
 
 func _process(delta):
 	if Input.is_action_just_pressed("l_up"):

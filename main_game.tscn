@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://hk4cy6mix1yk" path="res://main_menu.tscn" id="3_r2ja2"]
 [ext_resource type="PackedScene" uid="uid://crtr3d3vfuj2y" path="res://King/King.tscn" id="5_51e3k"]
 [ext_resource type="PackedScene" uid="uid://dmwr76y7a7yrg" path="res://juggle.tscn" id="6_blokk"]
-[ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_oqrmx"]
 [ext_resource type="Script" path="res://hud.gd" id="7_q6mi8"]
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="9_rcqca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb178"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3vdku")
@@ -36,6 +37,7 @@ visible = false
 hud = NodePath("../hud")
 
 [node name="hud" type="CanvasLayer" parent="." node_paths=PackedStringArray("king", "jester")]
+visible = false
 script = ExtResource("7_q6mi8")
 king = NodePath("../King")
 jester = NodePath("../Jester")
@@ -50,12 +52,11 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="hud/Control"]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -196.0
-offset_right = 216.0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 20
@@ -65,6 +66,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="PanelContainer" type="PanelContainer" parent="hud/Control/MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eb178")
 
 [node name="MarginContainer" type="MarginContainer" parent="hud/Control/MarginContainer/PanelContainer"]
 layout_mode = 2
@@ -75,20 +77,20 @@ theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 20
-
-[node name="StreakLabel" type="Label" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("7_oqrmx")
-text = "Streak: -"
 
 [node name="PercentLabel" type="Label" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
 text = "--%"
 horizontal_alignment = 1
 
 [node name="BestLabel" type="Label" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+horizontal_alignment = 1

@@ -14,10 +14,12 @@ var r_or_l = true
 @onready var hand_r = $HandR
 @onready var hand_l = $HandL
 @onready var round_timer = $RoundTimer
-
+const JUGGLE_JOY = preload("res://assets/juggle-inst-joy.png")
+const JUGGLE_KEY = preload("res://assets/juggle-instruct.png")
 
 func _ready():
 	InputManager.action_pressed.connect(handle_press)
+	InputManager.input_type_changed.connect(input_type_change)
 	round_timer.timeout.connect(stop)
 	
 
@@ -33,6 +35,7 @@ func start():
 func stop():
 	ball_spawner.stop()
 	is_active = false
+	hud.show()
 
 func throw():
 	r_or_l = not r_or_l
@@ -84,3 +87,7 @@ func _on_hand_l_area_exited(area: pip):
 		area.was_missed()
 		hud.register_miss()
 		InputManager.missed_note.emit()
+		
+func input_type_change(v):
+	$keys.visible = v == "keyboard"
+	$CanvasLayer/Control/MarginContainer/PanelContainer/VBoxContainer/TextureRect.texture = JUGGLE_KEY if v == 'keyboard' else JUGGLE_JOY
