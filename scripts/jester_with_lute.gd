@@ -29,6 +29,7 @@ func start():
 	animation_player.animation_finished.connect(finished)
 
 	var x = $song/pip.position
+	$song/pip.action = [0,1,2,3,4,5,6,7].pick_random()
 	var space = 94
 	for i in range(0,30):
 		var p = PIP.instantiate()
