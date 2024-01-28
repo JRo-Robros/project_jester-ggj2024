@@ -6,10 +6,14 @@ State	ID	Name	State Group			Notes
 	875054468	MelodyOFF	Melody			
 	2796181470	MelodyON	Melody			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	Music_Volume			\Default Work Unit\Music_Volume	
+	1564184899	SFX_Volume			\Default Work Unit\SFX_Volume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	865863285	Flubs			\Default Work Unit\Master Audio Bus\Flubs	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	4115515182	MelodyLines			\Default Work Unit\Master Audio Bus\MelodyLines	
+	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

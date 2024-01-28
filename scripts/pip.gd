@@ -12,7 +12,7 @@ var has_been_hit = false
 	set(value):
 		action_name = actions[value]
 		action = value
-		$Keys.frame = action
+		$Keys.frame = action if InputManager.input_type == "keyboard" else action + 8
 var action_name: String = "l_up"
 
 

@@ -9,56 +9,257 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="133642231" Type="User" Language="SFX" Hash="{474CFCE7-33BF-79B0-162B-75F956848932}">
+		<SoundBank Id="133642231" Type="User" Language="SFX" Hash="{A38022F3-730E-1724-78C6-B763AD329462}">
 			<ShortName>General</ShortName>
 			<Path>General.bnk</Path>
 			<Media>
+				<File Id="21840046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Catching04.wav</ShortName>
+					<CachePath>SFX/Catching04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="31357191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>JugglerIntro_120bpm_6-8_L4M.wav</ShortName>
+					<CachePath>SFX/JugglerIntro_120bpm_6-8_L4M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="47985065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_A - TenorRecorder_80bpm_4-4_L6M.wav</ShortName>
+					<CachePath>SFX/MM_A - TenorRecorder_80bpm_4-4_L6M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="78883905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Juggler - ViolaDaGamba_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Juggler - ViolaDaGamba_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="79216101" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_B - ViolaDaGamba_80bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/MM_B - ViolaDaGamba_80bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="102080941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LuteIntro_60bpm_4-4_L2M.wav</ShortName>
+					<CachePath>SFX/LuteIntro_60bpm_4-4_L2M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="132372014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dishes - Lute_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Dishes - Lute_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="142769068" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Throwing_Whoosh02.wav</ShortName>
+					<CachePath>SFX/Throwing_Whoosh02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="149978262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Juggler - Lute_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Juggler - Lute_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
 				<File Id="168083517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs04.wav</ShortName>
-					<CachePath>SFX/LH_Flubs04_818F3B66.wem</CachePath>
+					<CachePath>SFX/LH_Flubs04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="180529926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_A - Harpsichord_80bpm_4-4_L6M.wav</ShortName>
+					<CachePath>SFX/MM_A - Harpsichord_80bpm_4-4_L6M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="194218152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_A - SopRecorder_80bpm_4-4_L6M.wav</ShortName>
+					<CachePath>SFX/MM_A - SopRecorder_80bpm_4-4_L6M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="210425517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_A - ViolaDaGamba_80bpm_4-4_L6M.wav</ShortName>
+					<CachePath>SFX/MM_A - ViolaDaGamba_80bpm_4-4_L6M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="227157402" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LuteHero - SopRecorder_74bpm_4-4_L8M.wav</ShortName>
-					<CachePath>SFX/LuteHero - SopRecorder_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LuteHero - SopRecorder_74bpm_4-4_L8M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="237093002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs03.wav</ShortName>
-					<CachePath>SFX/LH_Flubs03_818F3B66.wem</CachePath>
+					<CachePath>SFX/LH_Flubs03_8E324C96.wem</CachePath>
 				</File>
 				<File Id="257578244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LuteHero - TenorRecorder_74bpm_4-4_L8M.wav</ShortName>
-					<CachePath>SFX/LuteHero - TenorRecorder_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LuteHero - TenorRecorder_74bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="259495732" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_B - SopRecorder_80bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/MM_B - SopRecorder_80bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="272103011" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_A - Lute_80bpm_4-4_L6M.wav</ShortName>
+					<CachePath>SFX/MM_A - Lute_80bpm_4-4_L6M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="273992801" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Juggler - Congas_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Juggler - Congas_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="325629617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Catching01.wav</ShortName>
+					<CachePath>SFX/Catching01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="382648733" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dishes - SopranoRecoder_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Dishes - SopranoRecoder_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="408975441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Breaking03.wav</ShortName>
+					<CachePath>SFX/Breaking03_8E324C96.wem</CachePath>
 				</File>
 				<File Id="416330306" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs05.wav</ShortName>
-					<CachePath>SFX/LH_Flubs05_818F3B66.wem</CachePath>
+					<CachePath>SFX/LH_Flubs05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="426702713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dishes - Shaker_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Dishes - Shaker_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="449499902" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Juggler - Tuba_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Juggler - Tuba_120bpm_6-8_L18M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="451991333" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs02.wav</ShortName>
-					<CachePath>SFX/LH_Flubs02_818F3B66.wem</CachePath>
+					<CachePath>SFX/LH_Flubs02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="466531162" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Squash.wav</ShortName>
+					<CachePath>SFX/Squash_8E324C96.wem</CachePath>
 				</File>
 				<File Id="469742779" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LuteHero - Lute_74bpm_4-4_L8M.wav</ShortName>
-					<CachePath>SFX/LuteHero - Lute_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LuteHero - Lute_74bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="505288262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_B - Harpsichord_80bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/MM_B - Harpsichord_80bpm_4-4_L8M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="571126015" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs01.wav</ShortName>
-					<CachePath>SFX/LH_Flubs01_159BB1EA.wem</CachePath>
+					<CachePath>SFX/LH_Flubs01_FC929777.wem</CachePath>
+				</File>
+				<File Id="582534598" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dishes - Cajon_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Dishes - Cajon_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="604800097" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_B - TenorRecorder_80bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/MM_B - TenorRecorder_80bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="637827262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Throwing_Whoosh01.wav</ShortName>
+					<CachePath>SFX/Throwing_Whoosh01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="642152741" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Breaking04.wav</ShortName>
+					<CachePath>SFX/Breaking04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="659349027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mouse_Select.wav</ShortName>
+					<CachePath>SFX/Mouse_Select_8E324C96.wem</CachePath>
 				</File>
 				<File Id="665297035" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LuteHero - Congas_74bpm_4-4_L8M.wav</ShortName>
-					<CachePath>SFX/LuteHero - Congas_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LuteHero - Congas_74bpm_4-4_L8M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="701752553" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LH_Flubs06.wav</ShortName>
-					<CachePath>SFX/LH_Flubs06_818F3B66.wem</CachePath>
+					<CachePath>SFX/LH_Flubs06_8E324C96.wem</CachePath>
+				</File>
+				<File Id="715892167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Juggler - Harpischord_120bpm_6-8_L18M.wav</ShortName>
+					<CachePath>SFX/Juggler - Harpischord_120bpm_6-8_L18M_56CEF360.wem</CachePath>
 				</File>
 				<File Id="720154020" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>LuteHero - ViolaDaGamba_74bpm_4-4_L8M.wav</ShortName>
-					<CachePath>SFX/LuteHero - ViolaDaGamba_74bpm_4-4_L8M_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/LuteHero - ViolaDaGamba_74bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="725836225" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Breaking05.wav</ShortName>
+					<CachePath>SFX/Breaking05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="761480750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fail - Tuba Stingers.wav</ShortName>
+					<CachePath>SFX/Fail - Tuba Stingers_56CEF360.wem</CachePath>
+				</File>
+				<File Id="816669074" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Breaking01.wav</ShortName>
+					<CachePath>SFX/Breaking01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="834374583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Catching02.wav</ShortName>
+					<CachePath>SFX/Catching02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="868610129" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Throwing_Whoosh04.wav</ShortName>
+					<CachePath>SFX/Throwing_Whoosh04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="883449392" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Throwing_Whoosh03.wav</ShortName>
+					<CachePath>SFX/Throwing_Whoosh03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="917409533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MM_B - Lute_80bpm_4-4_L8M.wav</ShortName>
+					<CachePath>SFX/MM_B - Lute_80bpm_4-4_L8M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="977020984" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Breaking02.wav</ShortName>
+					<CachePath>SFX/Breaking02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1034582558" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Catching03.wav</ShortName>
+					<CachePath>SFX/Catching03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1069437590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Victory - Tuba Stingers.wav</ShortName>
+					<CachePath>SFX/Victory - Tuba Stingers_56CEF360.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="773573050" Name="Breaking">
+					<MediaRefs>
+						<MediaRef Id="408975441"/>
+						<MediaRef Id="642152741"/>
+						<MediaRef Id="725836225"/>
+						<MediaRef Id="816669074"/>
+						<MediaRef Id="977020984"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1210588850" Name="Catching">
+					<MediaRefs>
+						<MediaRef Id="21840046"/>
+						<MediaRef Id="325629617"/>
+						<MediaRef Id="834374583"/>
+						<MediaRef Id="1034582558"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2872149298" Name="DishesMusic">
+					<MediaRefs>
+						<MediaRef Id="132372014"/>
+						<MediaRef Id="382648733"/>
+						<MediaRef Id="426702713"/>
+						<MediaRef Id="582534598"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2596272617" Name="Fail">
+					<MediaRefs>
+						<MediaRef Id="761480750"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2852581702" Name="Juggler_Intro">
+					<MediaRefs>
+						<MediaRef Id="31357191"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="783236646" Name="JugglerMusic">
+					<MediaRefs>
+						<MediaRef Id="78883905"/>
+						<MediaRef Id="149978262"/>
+						<MediaRef Id="273992801"/>
+						<MediaRef Id="449499902"/>
+						<MediaRef Id="715892167"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="840043798" Name="Lute_Intro">
+					<MediaRefs>
+						<MediaRef Id="102080941"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1571823810" Name="LuteHero_Flubs">
 					<MediaRefs>
 						<MediaRef Id="168083517"/>
@@ -78,7 +279,57 @@
 						<MediaRef Id="720154020"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="777890284" Name="MainMenu_Play">
+					<MediaRefs>
+						<MediaRef Id="47985065"/>
+						<MediaRef Id="79216101"/>
+						<MediaRef Id="180529926"/>
+						<MediaRef Id="194218152"/>
+						<MediaRef Id="210425517"/>
+						<MediaRef Id="259495732"/>
+						<MediaRef Id="272103011"/>
+						<MediaRef Id="505288262"/>
+						<MediaRef Id="604800097"/>
+						<MediaRef Id="917409533"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2747674870" Name="MainMenu_Stop" MaxAttenuation="0"/>
+				<Event Id="1986523542" Name="MouseSelect">
+					<MediaRefs>
+						<MediaRef Id="659349027"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2346531308" Name="MusicVolume" MaxAttenuation="0"/>
+				<Event Id="1564184899" Name="SFX_Volume" MaxAttenuation="0"/>
+				<Event Id="493551278" Name="Squashing">
+					<MediaRefs>
+						<MediaRef Id="466531162"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1281810935" Name="Start" MaxAttenuation="0"/>
+				<Event Id="4234308485" Name="Throwing">
+					<MediaRefs>
+						<MediaRef Id="142769068"/>
+						<MediaRef Id="637827262"/>
+						<MediaRef Id="868610129"/>
+						<MediaRef Id="883449392"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2716678721" Name="Victory">
+					<MediaRefs>
+						<MediaRef Id="1069437590"/>
+					</MediaRefs>
+				</Event>
 			</Events>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="MUSIC"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="Music_Volume"/>
+				<GameParameter Id="1564184899" Name="SFX_Volume"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1040548709" Name="Melody">
 					<States>
@@ -89,7 +340,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A8D980F8-CB43-1CA6-149F-0ADF373053BB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7E04F921-D8A8-F594-2608-C58E7F57DE37}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -99,10 +350,14 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="865863285" Name="Flubs"/>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="4115515182" Name="MelodyLines"/>
+				<Bus Id="3991942870" Name="MUSIC"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="Music_Volume"/>
+				<GameParameter Id="1564184899" Name="SFX_Volume"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1040548709" Name="Melody">
 					<States>
@@ -114,5 +369,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{53B24E6E-D591-34EB-C1D6-40F03B47C7D5}</FileHash>
+	<FileHash>{B5D295D7-6BCC-86B7-B65A-C2F4078039D2}</FileHash>
 </SoundBanksInfo>

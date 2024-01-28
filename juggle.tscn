@@ -1,0 +1,184 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmwr76y7a7yrg"]
+
+[ext_resource type="Script" path="res://juggle.gd" id="1_5wx5q"]
+[ext_resource type="Texture2D" uid="uid://b5r1sk6gggj15" path="res://assets/juggle-instruct.png" id="2_3xomh"]
+[ext_resource type="Texture2D" uid="uid://c10t5aibiyshj" path="res://assets/hand.png" id="3_0asgp"]
+[ext_resource type="Texture2D" uid="uid://icxwnw7g0ch1" path="res://assets/keys.png" id="3_5mgw6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xsr1"]
+bg_color = Color(0.529412, 0.572549, 0.505882, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3egg"]
+radius = 88.0057
+
+[sub_resource type="Curve2D" id="Curve2D_mkgr0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 629, 471, 0, 0, 0, 0, 723, 130, 0, 0, 0, 0, 753, 31, 0, 0, 0, 0, 815, -78, 0, 0, 0, 0, 877, -142, 0, 0, 0, 0, 930, -170, 0, 0, 0, 0, 980, -134, 0, 0, 0, 0, 997, -74, 0, 0, 0, 0, 1022, 60, 0, 0, 0, 0, 1035, 198, 0, 0, 0, 0, 1054, 940)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_saabe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1032, -450, 0, 0, 0, 0, -926, -181, 0, 0, 0, 0, -876, -63, 0, 0, 0, 0, -838, 11, 0, 0, 0, 0, -768, 93, 0, 0, 0, 0, -700, 128, 0, 0, 0, 0, -631, 45, 0, 0, 0, 0, -624, -162, 0, 0, 0, 0, -614, -291, 0, 0, 0, 0, -627, -910)
+}
+point_count = 10
+
+[node name="juggle" type="Node2D"]
+script = ExtResource("1_5wx5q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7xsr1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 52
+text = "Go for the Juggler!"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_3xomh")
+
+[node name="HandR" type="Area2D" parent="."]
+position = Vector2(1031, 461)
+monitoring = false
+
+[node name="Hand" type="Sprite2D" parent="HandR"]
+position = Vector2(36, 32)
+rotation = 1.51682
+scale = Vector2(1.45783, 1.35853)
+texture = ExtResource("3_0asgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandR"]
+position = Vector2(32, 18)
+shape = SubResource("CircleShape2D_s3egg")
+
+[node name="HandL" type="Area2D" parent="."]
+position = Vector2(624, 478)
+monitoring = false
+
+[node name="Hand" type="Sprite2D" parent="HandL"]
+position = Vector2(-25, 18)
+rotation = 1.51682
+scale = Vector2(1.45783, 1.35853)
+texture = ExtResource("3_0asgp")
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandL"]
+position = Vector2(-25, 4)
+shape = SubResource("CircleShape2D_s3egg")
+
+[node name="LtoR" type="Path2D" parent="."]
+position = Vector2(-12, 58)
+curve = SubResource("Curve2D_mkgr0")
+
+[node name="RtoL" type="Path2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(-1, -1)
+curve = SubResource("Curve2D_saabe")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RoundTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[node name="keys" type="Node2D" parent="."]
+
+[node name="Keys" type="Sprite2D" parent="keys"]
+position = Vector2(757, 430)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+
+[node name="Keys2" type="Sprite2D" parent="keys"]
+position = Vector2(714, 479)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 1
+
+[node name="Keys3" type="Sprite2D" parent="keys"]
+position = Vector2(758, 528)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 2
+
+[node name="Keys4" type="Sprite2D" parent="keys"]
+position = Vector2(806, 479)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 3
+
+[node name="Keys5" type="Sprite2D" parent="keys"]
+position = Vector2(915, 434)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 5
+
+[node name="Keys6" type="Sprite2D" parent="keys"]
+position = Vector2(866, 483)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 4
+
+[node name="Keys7" type="Sprite2D" parent="keys"]
+position = Vector2(913, 530)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 6
+
+[node name="Keys8" type="Sprite2D" parent="keys"]
+position = Vector2(962, 481)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_5mgw6")
+hframes = 8
+vframes = 2
+frame = 7
+
+[connection signal="area_exited" from="HandR" to="." method="_on_hand_r_area_exited"]
+[connection signal="area_exited" from="HandL" to="." method="_on_hand_l_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="throw"]

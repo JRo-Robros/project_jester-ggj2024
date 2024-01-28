@@ -1,8 +1,8 @@
-extends Node2D
+class_name King extends Node2D
 
-@export var chuckle_mood: float
-@export var laugh_mood: float
-@export var guffaw_mood: float
+@export var chuckle_mood: float = 0.5
+@export var laugh_mood: float = 0.75
+@export var guffaw_mood: float = 0.9
 
 @onready var animation_player = $AnimationPlayer
 

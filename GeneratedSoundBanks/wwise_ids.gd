@@ -2,12 +2,44 @@ class_name AK
 
 class EVENTS:
 
-	const LUTEHERO_FLUBS = 1571823810
+	const JUGGLERMUSIC = 783236646
+	const BREAKING = 773573050
+	const MAINMENU_STOP = 2747674870
+	const MAINMENU_PLAY = 777890284
 	const LUTEHERO_MUSIC = 1320126269
+	const LUTEHERO_FLUBS = 1571823810
+	const MOUSESELECT = 1986523542
+	const SQUASHING = 493551278
+	const THROWING = 4234308485
+	const CATCHING = 1210588850
+	const VICTORY = 2716678721
+	const LUTE_INTRO = 840043798
+	const FAIL = 2596272617
+	const START = 1281810935
+	const MUSICVOLUME = 2346531308
+	const SFX_VOLUME = 1564184899
+	const JUGGLER_INTRO = 2852581702
+	const DISHESMUSIC = 2872149298
 
 	const _dict = {
+		"JugglerMusic": JUGGLERMUSIC,
+		"Breaking": BREAKING,
+		"MainMenu_Stop": MAINMENU_STOP,
+		"MainMenu_Play": MAINMENU_PLAY,
+		"LuteHero_Music": LUTEHERO_MUSIC,
 		"LuteHero_Flubs": LUTEHERO_FLUBS,
-		"LuteHero_Music": LUTEHERO_MUSIC
+		"MouseSelect": MOUSESELECT,
+		"Squashing": SQUASHING,
+		"Throwing": THROWING,
+		"Catching": CATCHING,
+		"Victory": VICTORY,
+		"Lute_Intro": LUTE_INTRO,
+		"Fail": FAIL,
+		"Start": START,
+		"MusicVolume": MUSICVOLUME,
+		"SFX_Volume": SFX_VOLUME,
+		"Juggler_Intro": JUGGLER_INTRO,
+		"DishesMusic": DISHESMUSIC
 	}
 
 class STATES:
@@ -17,16 +49,16 @@ class STATES:
 
 		class STATE:
 			const NONE = 748895195
-			const MELODYOFF = 875054468
 			const MELODYON = 2796181470
+			const MELODYOFF = 875054468
 
 	const _dict = {
 		"Melody": {
 			"GROUP": 1040548709,
 			"STATE": {
 				"None": 748895195,
-				"MelodyOFF": 875054468,
-				"MelodyON": 2796181470
+				"MelodyON": 2796181470,
+				"MelodyOFF": 875054468
 			}
 		}
 	}
@@ -37,7 +69,13 @@ class SWITCHES:
 
 class GAME_PARAMETERS:
 
-	const _dict = {}
+	const SFX_VOLUME = 1564184899
+	const MUSIC_VOLUME = 1006694123
+
+	const _dict = {
+		"SFX_Volume": SFX_VOLUME,
+		"Music_Volume": MUSIC_VOLUME
+	}
 
 class TRIGGERS:
 
@@ -55,14 +93,14 @@ class BANKS:
 
 class BUSSES:
 
-	const FLUBS = 865863285
-	const MELODYLINES = 4115515182
+	const SFX = 393239870
 	const MASTER_AUDIO_BUS = 3803692087
+	const MUSIC = 3991942870
 
 	const _dict = {
-		"Flubs": FLUBS,
-		"MelodyLines": MELODYLINES,
-		"Master Audio Bus": MASTER_AUDIO_BUS
+		"SFX": SFX,
+		"Master Audio Bus": MASTER_AUDIO_BUS,
+		"MUSIC": MUSIC
 	}
 
 class AUX_BUSSES:
@@ -71,12 +109,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const SYSTEM = 3859886410
 	const NO_OUTPUT = 2317455096
+	const SYSTEM = 3859886410
 
 	const _dict = {
-		"System": SYSTEM,
-		"No_Output": NO_OUTPUT
+		"No_Output": NO_OUTPUT,
+		"System": SYSTEM
 	}
 
 class EXTERNAL_SOURCES:

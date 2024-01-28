@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://mjgo5ia0ule7"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_ulfll"]
+
+[node name="Ball" type="PathFollow2D"]
+rotates = false
+loop = false
+script = ExtResource("1_ulfll")
