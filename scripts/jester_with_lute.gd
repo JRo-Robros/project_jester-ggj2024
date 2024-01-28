@@ -19,6 +19,8 @@ const PIP = preload("res://pip.tscn")
 
 func _ready():
 	active_zone.score_tracker = hud
+	InputManager.bad_note.connect(shake)
+	InputManager.missed_note.connect(shake)
 
 func start():
 	InputManager.lute_intro.emit()
@@ -54,7 +56,7 @@ func finished(anim):
 	if not anim == "song_1": return
 	is_active = false
 	juggle.start()
-	
 
-
-	luteshake.play('shake')
+func shake():
+	if not is_active: return
+	$luteshake.play('shake')
