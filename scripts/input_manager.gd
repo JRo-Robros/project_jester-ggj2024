@@ -1,5 +1,7 @@
 extends Node
-
+signal good_note
+signal bad_note
+signal missed_note
 signal action_pressed
 signal action_released
 
