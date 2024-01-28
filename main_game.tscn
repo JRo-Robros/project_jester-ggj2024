@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cstwqshp2173q"]
+[gd_scene load_steps=6 format=3 uid="uid://cstwqshp2173q"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_3vdku"]
 [ext_resource type="Texture2D" uid="uid://frh3npavxmt" path="res://assets/stage.png" id="2_f1ivp"]
 [ext_resource type="PackedScene" uid="uid://dh2q63bf37hxk" path="res://jester_with_lute.tscn" id="3_jbpol"]
 [ext_resource type="PackedScene" uid="uid://hk4cy6mix1yk" path="res://main_menu.tscn" id="3_r2ja2"]
+[ext_resource type="PackedScene" uid="uid://cqdbm7mmk70ii" path="res://DishBounce/dish_bounce.tscn" id="5_te2n4"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3vdku")
@@ -18,3 +19,5 @@ texture = ExtResource("2_f1ivp")
 
 [node name="with_lute" parent="." instance=ExtResource("3_jbpol")]
 visible = false
+
+[node name="DishBounce" parent="." instance=ExtResource("5_te2n4")]

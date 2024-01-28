@@ -8,19 +8,20 @@
 script = ExtResource("1_rjqy6")
 
 [node name="DishSpawnTimer" type="Timer" parent="."]
+wait_time = 0.7
 one_shot = true
 autostart = true
 
 [node name="DishBounceJester" parent="." instance=ExtResource("1_0cotf")]
-position = Vector2(606, 319)
+position = Vector2(749, 302)
 
 [node name="DishHucker1" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(363, 293)
+position = Vector2(476, 276)
 
 [node name="DishHucker2" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(364, 379)
+position = Vector2(507, 362)
 
 [node name="DishHucker3" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(365, 458)
+position = Vector2(543, 441)
 
 [connection signal="timeout" from="DishSpawnTimer" to="." method="throw_random_dish"]

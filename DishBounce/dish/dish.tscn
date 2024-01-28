@@ -8,8 +8,8 @@
 
 [node name="Dish" type="Node2D"]
 script = ExtResource("1_uoohk")
-start_velocity = Vector2(20, -10)
-gravity = 1.0
+start_velocity = Vector2(500, -300)
+gravity = 800.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_dg10x")

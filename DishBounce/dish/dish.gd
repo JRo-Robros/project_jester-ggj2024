@@ -30,5 +30,5 @@ func _process(delta):
 		queue_free()
 		## TODO audiovisual effects
 	else:
-		velocity.y += gravity
-		global_position += velocity
+		velocity.y += gravity * delta
+		global_position += velocity * delta
