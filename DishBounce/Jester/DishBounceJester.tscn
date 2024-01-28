@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://djfq5cb70ifup"]
+
+[ext_resource type="Script" path="res://DishBounce/Jester/DishBounceJester.gd" id="1_4j1an"]
+[ext_resource type="Texture2D" uid="uid://bgswn01usrqt6" path="res://Jester/Jester.png" id="1_48itk"]
+[ext_resource type="Texture2D" uid="uid://bxo7s41rlgv6l" path="res://Jester/GameJam2024CharacterFaces.png" id="2_bi5l1"]
+
+[sub_resource type="Animation" id="Animation_sqk3t"]
+resource_name = "catch_low"
+
+[sub_resource type="Animation" id="Animation_er24u"]
+resource_name = "catch_middle"
+
+[sub_resource type="Animation" id="Animation_lv5ub"]
+resource_name = "catch_high"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgg8h"]
+_data = {
+"catch_high": SubResource("Animation_lv5ub"),
+"catch_low": SubResource("Animation_sqk3t"),
+"catch_middle": SubResource("Animation_er24u")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44nsr"]
+radius = 25.02
+
+[node name="DishBounceJester" type="Node2D"]
+script = ExtResource("1_4j1an")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cgg8h")
+}
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(250, 81)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(2.6492, 96.7793, 59.7607, 155.125)
+
+[node name="Head" type="Sprite2D" parent="Body"]
+position = Vector2(-5, -94)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(64.2769, 100.367, 99.7135, 95.1344)
+
+[node name="Faces" type="Sprite2D" parent="Body/Head"]
+texture = ExtResource("2_bi5l1")
+hframes = 3
+vframes = 3
+frame = 2
+
+[node name="HatLeft" type="Sprite2D" parent="Body/Head"]
+position = Vector2(-38, -44)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(87.6145, 3.21463, 38.8701, 86.9461)
+
+[node name="HatRight" type="Sprite2D" parent="Body/Head"]
+position = Vector2(47.2406, -33.8966)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(62.0421, 195.519, 80.8088, 56.2593)
+
+[node name="HatMiddle" type="Sprite2D" parent="Body/Head"]
+position = Vector2(9, -57)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(0, 0, 87.6145, 72.7715)
+
+[node name="HandLeft" type="Sprite2D" parent="Body"]
+position = Vector2(-33, -3)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(127.507, 0, 37.4926, 47.1992)
+
+[node name="HandRight" type="Sprite2D" parent="Body"]
+position = Vector2(39, -12)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(130.576, 251.778, 34.4239, 48.2217)
+
+[node name="FootLeft" type="Sprite2D" parent="Body"]
+position = Vector2(-43, 79)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(0, 253.228, 66.1051, 46.7724)
+
+[node name="FootRight" type="Sprite2D" parent="Body"]
+position = Vector2(43, 78)
+texture = ExtResource("1_48itk")
+region_enabled = true
+region_rect = Rect2(66.1337, 250.755, 65.4653, 49.2446)
+
+[node name="CatchHands" type="Area2D" parent="."]
+
+[node name="HighCatchHands" type="CollisionShape2D" parent="CatchHands"]
+position = Vector2(138, -18)
+shape = SubResource("CircleShape2D_44nsr")
+disabled = true
+
+[node name="MiddleCatchHands" type="CollisionShape2D" parent="CatchHands"]
+position = Vector2(136, 65)
+shape = SubResource("CircleShape2D_44nsr")
+disabled = true
+
+[node name="LowCatchHands" type="CollisionShape2D" parent="CatchHands"]
+position = Vector2(135, 142)
+shape = SubResource("CircleShape2D_44nsr")
+disabled = true
+
+[connection signal="area_entered" from="CatchHands" to="." method="bounce_dish"]

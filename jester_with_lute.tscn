@@ -1,12 +1,39 @@
-[gd_scene load_steps=16 format=3 uid="uid://2ljyt8xji5c0"]
+[gd_scene load_steps=16 format=3 uid="uid://dh2q63bf37hxk"]
 
 [ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
-[ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
+[ext_resource type="PackedScene" path="res://pip.tscn" id="2_tiwvu"]
 [ext_resource type="Script" path="res://active_zone.gd" id="3_fcu66"]
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="4_qcjkk"]
-[ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_d0joa"]
+[ext_resource type="Theme" path="res://new_theme.tres" id="7_d0joa"]
 [ext_resource type="Script" path="res://scripts/music_controller.gd" id="8_d0ck8"]
+
+[sub_resource type="Animation" id="Animation_g3xeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(567, 296)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_i82wx"]
 resource_name = "shake"
@@ -35,33 +62,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0395753, 0.0, -0.0792301, 0.0, 0.0519487, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_g3xeh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(567, 296)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ux3pd"]
