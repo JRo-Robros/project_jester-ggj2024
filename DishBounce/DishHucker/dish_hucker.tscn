@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4vhj526hchoh"]
+[gd_scene load_steps=3 format=3 uid="uid://b4vhj526hchoh"]
 
 [ext_resource type="Script" path="res://DishBounce/DishHucker/dish_hucker.gd" id="1_fkyv4"]
+[ext_resource type="PackedScene" uid="uid://j53p33x342es" path="res://DishBounce/dish/dish.tscn" id="2_rnvsb"]
 
 [node name="DishHucker" type="Node2D"]
 script = ExtResource("1_fkyv4")
+dish_scene = ExtResource("2_rnvsb")
 
 [node name="DishSpawnPos" type="Marker2D" parent="."]
 

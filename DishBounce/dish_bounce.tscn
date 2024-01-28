@@ -15,10 +15,12 @@ autostart = true
 position = Vector2(606, 319)
 
 [node name="DishHucker1" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(118, 167)
+position = Vector2(363, 293)
 
 [node name="DishHucker2" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(110, 296)
+position = Vector2(364, 379)
 
 [node name="DishHucker3" parent="." instance=ExtResource("3_auih3")]
-position = Vector2(115, 472)
+position = Vector2(365, 458)
+
+[connection signal="timeout" from="DishSpawnTimer" to="." method="throw_random_dish"]

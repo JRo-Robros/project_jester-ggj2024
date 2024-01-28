@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://j53p33x342es"]
+
+[ext_resource type="Script" path="res://DishBounce/dish/dish.gd" id="1_uoohk"]
+[ext_resource type="Script" path="res://DishBounce/dish/Area2D.gd" id="2_0va6c"]
+[ext_resource type="Texture2D" uid="uid://dufgmlahu5825" path="res://DishBounce/dish/GameJam2024Breakables.png" id="2_dg10x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gy7gj"]
+
+[node name="Dish" type="Node2D"]
+script = ExtResource("1_uoohk")
+start_velocity = Vector2(20, -10)
+gravity = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dg10x")
+hframes = 3
+vframes = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_0va6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gy7gj")
+
+[connection signal="thrown" from="Area2D" to="." method="throw"]
