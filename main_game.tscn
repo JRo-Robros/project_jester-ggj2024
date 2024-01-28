@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://hk4cy6mix1yk" path="res://main_menu.tscn" id="3_r2ja2"]
 [ext_resource type="PackedScene" uid="uid://crtr3d3vfuj2y" path="res://King/King.tscn" id="5_51e3k"]
 [ext_resource type="PackedScene" uid="uid://cqdbm7mmk70ii" path="res://DishBounce/dish_bounce.tscn" id="5_te2n4"]
-[ext_resource type="PackedScene" path="res://juggle.tscn" id="6_blokk"]
+[ext_resource type="PackedScene" uid="uid://dmwr76y7a7yrg" path="res://juggle.tscn" id="6_blokk"]
 [ext_resource type="Script" path="res://hud.gd" id="7_q6mi8"]
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="9_rcqca"]
 

@@ -35,6 +35,7 @@ func _process(delta):
 	if global_position.y > break_y:
 		if not hit:
 			broke.emit()
+			InputManager.dish_break.emit()
 		queue_free()
 	else:
 		velocity.y += gravity * delta

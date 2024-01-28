@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
 [ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
 [ext_resource type="Script" path="res://scripts/active_zone.gd" id="3_fcu66"]
-[ext_resource type="Texture2D" path="res://assets/luteinstruct.png" id="6_2ehac"]
+[ext_resource type="Texture2D" uid="uid://bqsysxbrx11ed" path="res://assets/luteinstruct.png" id="6_2ehac"]
 [ext_resource type="Script" path="res://scripts/music_controller.gd" id="8_d0ck8"]
 
 [sub_resource type="Animation" id="Animation_g3xeh"]
@@ -340,6 +340,13 @@ position = Vector2(-559, -404)
 event = {
 "id": 2872149298,
 "name": "DishesMusic"
+}
+position = Vector2(-559, -404)
+
+[node name="AkDishBreak" type="AkEvent2D" parent="WwiseScripts"]
+event = {
+"id": 773573050,
+"name": "Breaking"
 }
 position = Vector2(-559, -404)
 
