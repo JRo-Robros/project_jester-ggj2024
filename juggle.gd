@@ -1,5 +1,7 @@
 extends Node2D
 
+signal finished
+
 @export var hud: Hud
 var is_active = false:
 	set(value):
@@ -40,6 +42,7 @@ func start():
 func stop():
 	ball_spawner.stop()
 	is_active = false
+	finished.emit()
 	dish_bounce.start()
 
 func throw():
