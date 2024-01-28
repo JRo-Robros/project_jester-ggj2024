@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://2ljyt8xji5c0"]
+[gd_scene load_steps=16 format=3 uid="uid://dh2q63bf37hxk"]
 
 [ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
