@@ -12,6 +12,8 @@ extends Node2D
 signal bounced
 signal broke
 
+var hit: bool = false
+
 var velocity: Vector2 = Vector2(0,0)
 
 func _ready():
@@ -23,12 +25,17 @@ func _ready():
 func throw():
 	velocity = start_velocity
 
+func bounce():
+	velocity = start_velocity
+	hit = true
+	bounced.emit()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if global_position.y > break_y:
-		broke.emit()
+		if not hit:
+			broke.emit()
 		queue_free()
-		## TODO audiovisual effects
 	else:
 		velocity.y += gravity * delta
 		global_position += velocity * delta

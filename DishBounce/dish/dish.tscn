@@ -22,4 +22,5 @@ script = ExtResource("2_0va6c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_gy7gj")
 
+[connection signal="bounced" from="Area2D" to="." method="bounce"]
 [connection signal="thrown" from="Area2D" to="." method="throw"]

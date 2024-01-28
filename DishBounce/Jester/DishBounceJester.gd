@@ -18,8 +18,8 @@ func _process(delta):
 	pass
 
 func bounce_dish(dish: Area2D):
-	if dish.has_method("throw"):
-		dish.throw()
+	if dish.has_method("bounce"):
+		dish.bounce()
 
 func handle_input_pressed(input: String):
 	if input == "r_up":

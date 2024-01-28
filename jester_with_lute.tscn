@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/jester_with_lute.gd" id="1_5uvjp"]
 [ext_resource type="Texture2D" uid="uid://dmn6y4co8i8jb" path="res://assets/lutefretboard.png" id="2_eefsy"]
-[ext_resource type="PackedScene" path="res://pip.tscn" id="2_tiwvu"]
+[ext_resource type="PackedScene" uid="uid://clpucg8qk7jmv" path="res://pip.tscn" id="2_tiwvu"]
 [ext_resource type="Script" path="res://active_zone.gd" id="3_fcu66"]
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="4_qcjkk"]
-[ext_resource type="Theme" path="res://new_theme.tres" id="7_d0joa"]
+[ext_resource type="Theme" uid="uid://dgl6858a3fmae" path="res://new_theme.tres" id="7_d0joa"]
 [ext_resource type="Script" path="res://scripts/music_controller.gd" id="8_d0ck8"]
 
 [sub_resource type="Animation" id="Animation_g3xeh"]
