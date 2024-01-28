@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_3vdku"]
 [ext_resource type="Texture2D" uid="uid://frh3npavxmt" path="res://assets/stage.png" id="2_f1ivp"]
-[ext_resource type="PackedScene" uid="uid://2ljyt8xji5c0" path="res://jester_with_lute.tscn" id="3_jbpol"]
+[ext_resource type="PackedScene" uid="uid://dh2q63bf37hxk" path="res://jester_with_lute.tscn" id="3_jbpol"]
 [ext_resource type="PackedScene" uid="uid://hk4cy6mix1yk" path="res://main_menu.tscn" id="3_r2ja2"]
 [ext_resource type="PackedScene" uid="uid://crtr3d3vfuj2y" path="res://King/King.tscn" id="5_51e3k"]
 [ext_resource type="PackedScene" path="res://juggle.tscn" id="6_blokk"]
@@ -34,6 +34,10 @@ position = Vector2(-2, 31)
 position = Vector2(648, 248)
 
 [node name="juggle" parent="." node_paths=PackedStringArray("hud") instance=ExtResource("6_blokk")]
+visible = false
+hud = NodePath("../hud")
+
+[node name="DishBounce" parent="." node_paths=PackedStringArray("hud") instance=ExtResource("5_te2n4")]
 visible = false
 hud = NodePath("../hud")
 
@@ -109,6 +113,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 82
 horizontal_alignment = 1
+
 
 [node name="HBoxContainer" type="HBoxContainer" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqdbm7mmk70ii"]
+
+[ext_resource type="PackedScene" uid="uid://djfq5cb70ifup" path="res://DishBounce/Jester/DishBounceJester.tscn" id="1_0cotf"]
+[ext_resource type="Script" path="res://DishBounce/dish_bounce.gd" id="1_rjqy6"]
+[ext_resource type="PackedScene" uid="uid://b4vhj526hchoh" path="res://DishBounce/DishHucker/dish_hucker.tscn" id="3_auih3"]
+
+[node name="DishBounce" type="Node2D"]
+script = ExtResource("1_rjqy6")
+
+[node name="MinigameTimer" type="Timer" parent="."]
+wait_time = 27.0
+one_shot = true
+
+[node name="DishSpawnTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="DishBounceJester" parent="." instance=ExtResource("1_0cotf")]
+position = Vector2(749, 302)
+fail_face = 1
+
+[node name="DishHucker1" parent="." instance=ExtResource("3_auih3")]
+position = Vector2(476, 276)
+
+[node name="DishHucker2" parent="." instance=ExtResource("3_auih3")]
+position = Vector2(507, 362)
+
+[node name="DishHucker3" parent="." instance=ExtResource("3_auih3")]
+position = Vector2(543, 441)
+
+[connection signal="timeout" from="MinigameTimer" to="." method="stop"]
+[connection signal="timeout" from="DishSpawnTimer" to="." method="throw_random_dish"]
+[connection signal="thrown" from="DishHucker1" to="." method="watch_dish"]
+[connection signal="thrown" from="DishHucker2" to="." method="watch_dish"]
+[connection signal="thrown" from="DishHucker3" to="." method="watch_dish"]

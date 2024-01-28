@@ -15,6 +15,8 @@ func _ready():
 	InputManager.catch.connect(catch)
 	InputManager.victory.connect(victory)
 	InputManager.fail.connect(fail)	
+	InputManager.dish_music.connect(dish_music)	
+	InputManager.dish_break.connect(dish_break)
 	
 func play():
 	$AkLuteMusic.post_event()
@@ -58,4 +60,9 @@ func victory():
 
 func fail():
 	$AkFail.post_event()
-	
+
+func dish_music():
+	$AkDishMusic.post_event()
+
+func dish_break():
+	$AkDishBreak.post_event()
