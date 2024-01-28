@@ -2,6 +2,7 @@ class_name DishBounceGame
 extends Node2D
 
 @onready var dish_spawn_timer: = $DishSpawnTimer as Timer
+@onready var dish_bounce_jester = $DishBounceJester
 
 @onready var dish_hucker_1: = $DishHucker1 as DishHucker
 @onready var dish_hucker_2: = $DishHucker2 as DishHucker
@@ -38,6 +39,7 @@ func update_score_and_mood():
 	mood = hits / (hits + misses)
 	var percent = round(mood * 100)
 	percent_label.text = "%s %%" % percent
+	dish_bounce_jester.set_mood(mood)
 
 func throw_random_dish():
 	dish_spawn_timer.start()

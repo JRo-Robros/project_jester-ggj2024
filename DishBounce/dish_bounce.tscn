@@ -14,6 +14,7 @@ autostart = true
 
 [node name="DishBounceJester" parent="." instance=ExtResource("1_0cotf")]
 position = Vector2(749, 302)
+fail_face = 1
 
 [node name="DishHucker1" parent="." instance=ExtResource("3_auih3")]
 position = Vector2(476, 276)

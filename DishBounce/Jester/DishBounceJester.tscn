@@ -605,6 +605,9 @@ radius = 25.02
 
 [node name="DishBounceJester" type="Node2D"]
 script = ExtResource("1_4j1an")
+fail_face = 8
+oof_face = 8
+okay_face = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -629,7 +632,6 @@ region_rect = Rect2(64.2769, 100.367, 99.7135, 95.1344)
 texture = ExtResource("2_bi5l1")
 hframes = 3
 vframes = 3
-frame = 2
 
 [node name="HatLeft" type="Sprite2D" parent="Body/Head"]
 position = Vector2(-38, -44)
