@@ -4,9 +4,12 @@
 [ext_resource type="Script" path="res://DishBounce/dish_bounce.gd" id="1_rjqy6"]
 [ext_resource type="PackedScene" uid="uid://b4vhj526hchoh" path="res://DishBounce/DishHucker/dish_hucker.tscn" id="3_auih3"]
 
-[node name="DishBounce" type="Node2D" node_paths=PackedStringArray("hud")]
+[node name="DishBounce" type="Node2D"]
 script = ExtResource("1_rjqy6")
-hud = NodePath("")
+
+[node name="MinigameTimer" type="Timer" parent="."]
+wait_time = 27.0
+one_shot = true
 
 [node name="DishSpawnTimer" type="Timer" parent="."]
 wait_time = 0.7
@@ -25,6 +28,7 @@ position = Vector2(507, 362)
 [node name="DishHucker3" parent="." instance=ExtResource("3_auih3")]
 position = Vector2(543, 441)
 
+[connection signal="timeout" from="MinigameTimer" to="." method="stop"]
 [connection signal="timeout" from="DishSpawnTimer" to="." method="throw_random_dish"]
 [connection signal="thrown" from="DishHucker1" to="." method="watch_dish"]
 [connection signal="thrown" from="DishHucker2" to="." method="watch_dish"]

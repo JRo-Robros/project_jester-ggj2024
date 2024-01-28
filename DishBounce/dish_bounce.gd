@@ -3,6 +3,8 @@ extends Node2D
 
 
 @export var hud: Hud
+
+@onready var minigame_timer: = $MinigameTimer as Timer
 @onready var dish_spawn_timer: = $DishSpawnTimer as Timer
 @onready var dish_bounce_jester = $DishBounceJester
 
@@ -19,6 +21,7 @@ var misses: float = 0
 func start():
 	visible = true
 	dish_spawn_timer.start()
+	minigame_timer.start()
 	InputManager.dish_music.emit()
 
 func stop():
@@ -31,10 +34,17 @@ func watch_dish(dish: Dish):
 
 func register_hit():
 	hud.register_hit()
+	hits += 1
+	update_jester_mood()
 
 func register_miss():
 	hud.register_miss()
-	
+	misses += 1
+	update_jester_mood()
+
+func update_jester_mood():
+	mood = hits / (hits + misses)
+	dish_bounce_jester.set_mood(mood)
 
 func throw_random_dish():
 	dish_spawn_timer.start()

@@ -3,7 +3,7 @@ extends Node2D
 
 # Set this when the dish spawns. If it drops below this level it shatters.
 # (Different based on where the dish is spawned on the screen)
-@export var break_y: float = 1000
+@export var break_x: float = 1500
 @export var start_velocity: Vector2 # pixels per tick
 @export var gravity: float # pixels per tick
 
@@ -32,7 +32,7 @@ func bounce():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if global_position.y > break_y:
+	if global_position.x > break_x:
 		if not hit:
 			broke.emit()
 			InputManager.dish_break.emit()
