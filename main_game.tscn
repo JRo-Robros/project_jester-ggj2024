@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cstwqshp2173q"]
+[gd_scene load_steps=11 format=3 uid="uid://cstwqshp2173q"]
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_3vdku"]
 [ext_resource type="Texture2D" uid="uid://frh3npavxmt" path="res://assets/stage.png" id="2_f1ivp"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://crtr3d3vfuj2y" path="res://King/King.tscn" id="5_51e3k"]
 [ext_resource type="PackedScene" uid="uid://dmwr76y7a7yrg" path="res://juggle.tscn" id="6_blokk"]
 [ext_resource type="Script" path="res://hud.gd" id="7_q6mi8"]
+[ext_resource type="PackedScene" uid="uid://dwbpdlexr0tpk" path="res://credits.tscn" id="9_6yru0"]
 [ext_resource type="PackedScene" uid="uid://sq5r1e4inoro" path="res://Jester/Jester.tscn" id="9_rcqca"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb178"]
@@ -103,3 +104,22 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 82
 horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Credits" type="Button" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Quit" type="Button" parent="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Credits" parent="." instance=ExtResource("9_6yru0")]
+visible = false
+
+[connection signal="pressed" from="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="hud/Control/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

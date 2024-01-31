@@ -12,3 +12,12 @@ func _ready():
 func start_game():
 	InputManager.stop_title.emit()
 	lute_game.start()
+
+
+func _on_credits_pressed():
+	$Credits.show()
+	$hud.hide()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
