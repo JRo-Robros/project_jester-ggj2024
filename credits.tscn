@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bafcgkfk6p4j0"]
+[gd_scene load_steps=3 format=3 uid="uid://dwbpdlexr0tpk"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_uckjh"]
-[ext_resource type="Texture2D" uid="uid://bsqxo2c5guntx" path="res://assets/GameJam2024CreditsScreen.png" id="2_8y63s"]
+[ext_resource type="Texture2D" uid="uid://chhy1h23gakyb" path="res://assets/GameJam2024CreditsScreen.png" id="2_8y63s"]
 
 [node name="Credits" type="CanvasLayer"]
 script = ExtResource("1_uckjh")
@@ -43,13 +43,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Again" type="Button" parent="Control/MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = "Again"
-
 [node name="Quit" type="Button" parent="Control/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Again" to="." method="_on_again_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

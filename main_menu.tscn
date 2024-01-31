@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://hk4cy6mix1yk"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_u5lax"]
-[ext_resource type="Texture2D" uid="uid://dnwhw7x2tko1" path="res://assets/GameJam2024TitleScreen.png" id="2_a08ld"]
+[ext_resource type="Texture2D" uid="uid://dct7wcv4ewvtk" path="res://assets/GameJam2024TitleScreen.png" id="2_peevx"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_u5lax")
@@ -21,24 +21,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_a08ld")
+texture = ExtResource("2_peevx")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -258.5
+offset_top = -150.0
+offset_right = 258.5
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_bottom = 20
+grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
-
-[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 8
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
