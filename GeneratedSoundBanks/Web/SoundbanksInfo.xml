@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="133642231" Type="User" Language="SFX" Hash="{A38022F3-730E-1724-78C6-B763AD329462}">
+		<SoundBank Id="133642231" Type="User" Language="SFX" Hash="{B5CCBF51-E1AE-CFF2-AB4A-A9769A21610E}">
 			<ShortName>General</ShortName>
 			<Path>General.bnk</Path>
 			<Media>
@@ -89,6 +89,10 @@
 					<ShortName>Juggler - Congas_120bpm_6-8_L18M.wav</ShortName>
 					<CachePath>SFX/Juggler - Congas_120bpm_6-8_L18M_56CEF360.wem</CachePath>
 				</File>
+				<File Id="313444907" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>for wwise.mid</ShortName>
+					<CachePath>SFX/for wwise_52C39917.wem</CachePath>
+				</File>
 				<File Id="325629617" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Catching01.wav</ShortName>
 					<CachePath>SFX/Catching01_8E324C96.wem</CachePath>
@@ -108,6 +112,10 @@
 				<File Id="426702713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dishes - Shaker_120bpm_6-8_L18M.wav</ShortName>
 					<CachePath>SFX/Dishes - Shaker_120bpm_6-8_L18M_56CEF360.wem</CachePath>
+				</File>
+				<File Id="436242884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ow1(2).wav</ShortName>
+					<CachePath>SFX/Ow1(2)_8E324C96.wem</CachePath>
 				</File>
 				<File Id="449499902" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Juggler - Tuba_120bpm_6-8_L18M.wav</ShortName>
@@ -193,6 +201,10 @@
 					<ShortName>Throwing_Whoosh03.wav</ShortName>
 					<CachePath>SFX/Throwing_Whoosh03_8E324C96.wem</CachePath>
 				</File>
+				<File Id="893030655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bounce(2).wav</ShortName>
+					<CachePath>SFX/Bounce(2)_8E324C96.wem</CachePath>
+				</File>
 				<File Id="917409533" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MM_B - Lute_80bpm_4-4_L8M.wav</ShortName>
 					<CachePath>SFX/MM_B - Lute_80bpm_4-4_L8M_56CEF360.wem</CachePath>
@@ -205,12 +217,21 @@
 					<ShortName>Catching03.wav</ShortName>
 					<CachePath>SFX/Catching03_8E324C96.wem</CachePath>
 				</File>
+				<File Id="1046395638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ow2(2).wav</ShortName>
+					<CachePath>SFX/Ow2(2)_8E324C96.wem</CachePath>
+				</File>
 				<File Id="1069437590" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Victory - Tuba Stingers.wav</ShortName>
 					<CachePath>SFX/Victory - Tuba Stingers_56CEF360.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1496458317" Name="Bounce">
+					<MediaRefs>
+						<MediaRef Id="893030655"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="773573050" Name="Breaking">
 					<MediaRefs>
 						<MediaRef Id="408975441"/>
@@ -274,6 +295,7 @@
 					<MediaRefs>
 						<MediaRef Id="227157402"/>
 						<MediaRef Id="257578244"/>
+						<MediaRef Id="313444907"/>
 						<MediaRef Id="469742779"/>
 						<MediaRef Id="665297035"/>
 						<MediaRef Id="720154020"/>
@@ -300,6 +322,12 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2346531308" Name="MusicVolume" MaxAttenuation="0"/>
+				<Event Id="1651971879" Name="Ow">
+					<MediaRefs>
+						<MediaRef Id="436242884"/>
+						<MediaRef Id="1046395638"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1564184899" Name="SFX_Volume" MaxAttenuation="0"/>
 				<Event Id="493551278" Name="Squashing">
 					<MediaRefs>
@@ -369,5 +397,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{44BA00DB-5FCE-E8E4-F2F7-A4949AABA6AC}</FileHash>
+	<FileHash>{2E0FEE04-F397-395C-959F-509284029CFA}</FileHash>
 </SoundBanksInfo>

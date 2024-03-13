@@ -390,3 +390,5 @@ stretch_mode = 3
 
 [connection signal="area_entered" from="active_zone" to="active_zone" method="_on_area_entered"]
 [connection signal="area_exited" from="active_zone" to="active_zone" method="_on_area_exited"]
+[connection signal="midi_event" from="WwiseScripts/AkLuteMusic" to="WwiseScripts" method="_on_ak_lute_music_midi_event"]
+[connection signal="music_sync_grid" from="WwiseScripts/AkLuteMusic" to="WwiseScripts" method="_on_ak_lute_music_music_sync_grid"]

@@ -2,44 +2,50 @@ class_name AK
 
 class EVENTS:
 
-	const JUGGLERMUSIC = 783236646
-	const BREAKING = 773573050
-	const MAINMENU_STOP = 2747674870
 	const MAINMENU_PLAY = 777890284
-	const LUTEHERO_MUSIC = 1320126269
-	const LUTEHERO_FLUBS = 1571823810
-	const MOUSESELECT = 1986523542
 	const SQUASHING = 493551278
-	const THROWING = 4234308485
+	const JUGGLERMUSIC = 783236646
+	const SFX_VOLUME = 1564184899
+	const LUTEHERO_MUSIC = 1320126269
 	const CATCHING = 1210588850
-	const VICTORY = 2716678721
-	const LUTE_INTRO = 840043798
 	const FAIL = 2596272617
+	const THROWING = 4234308485
+	const MOUSESELECT = 1986523542
+	const DISHESMUSIC = 2872149298
+	const BOUNCE = 1496458317
 	const START = 1281810935
 	const MUSICVOLUME = 2346531308
-	const SFX_VOLUME = 1564184899
+	const BREAKING = 773573050
+	const LUTEHERO_FLUBS = 1571823810
+	const VICTORY = 2716678721
+	const MAINMENU_STOP = 2747674870
+	const LUTE_INTRO = 840043798
+	const JUGGLERFLUBS = 384174469
+	const OW = 1651971879
 	const JUGGLER_INTRO = 2852581702
-	const DISHESMUSIC = 2872149298
 
 	const _dict = {
-		"JugglerMusic": JUGGLERMUSIC,
-		"Breaking": BREAKING,
-		"MainMenu_Stop": MAINMENU_STOP,
 		"MainMenu_Play": MAINMENU_PLAY,
-		"LuteHero_Music": LUTEHERO_MUSIC,
-		"LuteHero_Flubs": LUTEHERO_FLUBS,
-		"MouseSelect": MOUSESELECT,
 		"Squashing": SQUASHING,
-		"Throwing": THROWING,
+		"JugglerMusic": JUGGLERMUSIC,
+		"SFX_Volume": SFX_VOLUME,
+		"LuteHero_Music": LUTEHERO_MUSIC,
 		"Catching": CATCHING,
-		"Victory": VICTORY,
-		"Lute_Intro": LUTE_INTRO,
 		"Fail": FAIL,
+		"Throwing": THROWING,
+		"MouseSelect": MOUSESELECT,
+		"DishesMusic": DISHESMUSIC,
+		"Bounce": BOUNCE,
 		"Start": START,
 		"MusicVolume": MUSICVOLUME,
-		"SFX_Volume": SFX_VOLUME,
-		"Juggler_Intro": JUGGLER_INTRO,
-		"DishesMusic": DISHESMUSIC
+		"Breaking": BREAKING,
+		"LuteHero_Flubs": LUTEHERO_FLUBS,
+		"Victory": VICTORY,
+		"MainMenu_Stop": MAINMENU_STOP,
+		"Lute_Intro": LUTE_INTRO,
+		"JugglerFlubs": JUGGLERFLUBS,
+		"Ow": OW,
+		"Juggler_Intro": JUGGLER_INTRO
 	}
 
 class STATES:
@@ -48,16 +54,16 @@ class STATES:
 		const GROUP = 1040548709
 
 		class STATE:
-			const NONE = 748895195
 			const MELODYON = 2796181470
+			const NONE = 748895195
 			const MELODYOFF = 875054468
 
 	const _dict = {
 		"Melody": {
 			"GROUP": 1040548709,
 			"STATE": {
-				"None": 748895195,
 				"MelodyON": 2796181470,
+				"None": 748895195,
 				"MelodyOFF": 875054468
 			}
 		}
@@ -109,12 +115,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const NO_OUTPUT = 2317455096
 	const SYSTEM = 3859886410
+	const NO_OUTPUT = 2317455096
 
 	const _dict = {
-		"No_Output": NO_OUTPUT,
-		"System": SYSTEM
+		"System": SYSTEM,
+		"No_Output": NO_OUTPUT
 	}
 
 class EXTERNAL_SOURCES:

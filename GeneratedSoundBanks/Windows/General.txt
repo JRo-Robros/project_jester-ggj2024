@@ -2,21 +2,23 @@ Event	ID	Name			Wwise Object Path	Notes
 	493551278	Squashing			\Default Work Unit\Dishes\Squashing	
 	773573050	Breaking			\Default Work Unit\Dishes\Breaking	
 	777890284	MainMenu_Play			\Default Work Unit\Menu\MainMenu_Play	
-	783236646	JugglerMusic			\Default Work Unit\JugglerMusic	
+	783236646	JugglerMusic			\Default Work Unit\Juggle\JugglerMusic	
 	840043798	Lute_Intro			\Default Work Unit\Stingers\Lute_Intro	
-	1210588850	Catching			\Default Work Unit\Catching	
+	1210588850	Catching			\Default Work Unit\Juggle\Catching	
 	1281810935	Start			\Default Work Unit\Menu\Start	
 	1320126269	LuteHero_Music			\Default Work Unit\LuteHero\LuteHero_Music	
+	1496458317	Bounce			\Default Work Unit\Dishes\Bounce	
 	1564184899	SFX_Volume			\Default Work Unit\SFX_Volume	
 	1571823810	LuteHero_Flubs			\Default Work Unit\LuteHero\LuteHero_Flubs	
+	1651971879	Ow			\Default Work Unit\Dishes\Ow	
 	1986523542	MouseSelect			\Default Work Unit\Menu\MouseSelect	
 	2346531308	MusicVolume			\Default Work Unit\MusicVolume	
 	2596272617	Fail			\Default Work Unit\Stingers\Fail	
 	2716678721	Victory			\Default Work Unit\Stingers\Victory	
 	2747674870	MainMenu_Stop			\Default Work Unit\Menu\MainMenu_Stop	
 	2852581702	Juggler_Intro			\Default Work Unit\Stingers\Juggler_Intro	
-	2872149298	DishesMusic			\Default Work Unit\DishesMusic	
-	4234308485	Throwing			\Default Work Unit\Throwing	
+	2872149298	DishesMusic			\Default Work Unit\Dishes\DishesMusic	
+	4234308485	Throwing			\Default Work Unit\Juggle\Throwing	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	1040548709	Melody			\Default Work Unit\Melody	
@@ -55,11 +57,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	259495732	New Random Music Track_01	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\MM_B - SopRecorder_80bpm_4-4_L8M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu_Music\MainMenu_B\New Random Music Track_01		337569
 	272103011	New Random Music Track_01	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\MM_A - Lute_80bpm_4-4_L6M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu_Music\MainMenu_A\New Random Music Track_01		204674
 	273992801	Juggler - Congas_120bpm_6-8_L18M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Juggler - Congas_120bpm_6-8_L18M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Juggler\Juggler\Juggler - Congas_120bpm_6-8_L18M		307701
+	313444907	for wwise	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\for wwise_52C39917.wem		\Interactive Music Hierarchy\Default Work Unit\LuteHero\LuteHero1\for wwise		416
 	325629617	Catching01	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Catching01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\Catching01		15906
 	382648733	Dishes - SopranoRecoder_120bpm_6-8_L18M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Dishes - SopranoRecoder_120bpm_6-8_L18M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Dishes\Dishes\Dishes - SopranoRecoder_120bpm_6-8_L18M		348588
 	408975441	Breaking03	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Breaking03_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Breaking\Breaking03		56091
 	416330306	LH_Flubs05	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\LH_Flubs05_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs05		41889
 	426702713	Dishes - Shaker_120bpm_6-8_L18M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Dishes - Shaker_120bpm_6-8_L18M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Dishes\Dishes\Dishes - Shaker_120bpm_6-8_L18M		393698
+	436242884	Ow1(2)	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Ow1(2)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ouch\Ow1(2)		11457
 	449499902	Juggler - Tuba_120bpm_6-8_L18M	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Juggler - Tuba_120bpm_6-8_L18M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Juggler\Juggler\Juggler - Tuba_120bpm_6-8_L18M		358627
 	451991333	LH_Flubs02	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\LH_Flubs02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\LH_Flubs\LH_Flubs02		38927
 	466531162	Squash	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Squash_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squash		18043
@@ -81,8 +85,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	834374583	Catching02	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Catching02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\Catching02		15251
 	868610129	Throwing_Whoosh04	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Throwing_Whoosh04_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throwing_Whoosh\Throwing_Whoosh04		7795
 	883449392	Throwing_Whoosh03	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Throwing_Whoosh03_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throwing_Whoosh\Throwing_Whoosh03		8099
+	893030655	Bounce	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Bounce(2)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bounce		11205
 	917409533	New Random Music Track	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\MM_B - Lute_80bpm_4-4_L8M_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\MainMenu_Music\MainMenu_B\New Random Music Track		333661
 	977020984	Breaking02	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Breaking02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Breaking\Breaking02		59295
 	1034582558	Catching03	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Catching03_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\Catching03		14927
+	1046395638	Ow2(2)	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Ow2(2)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ouch\Ow2(2)		8959
 	1069437590	Victory - Tuba Stingers	C:\Users\52stu\Documents\WwiseProjects\GJJ2024\.cache\Windows\SFX\Victory - Tuba Stingers_56CEF360.wem		\Interactive Music Hierarchy\Shorts\Victory\Victory - Tuba Stingers\Victory - Tuba Stingers		91829
 

@@ -59,3 +59,11 @@ func victory():
 func fail():
 	$AkFail.post_event()
 	
+func _on_ak_lute_music_music_sync_grid(data):
+	print_debug("grid")
+	print_debug(data)
+
+
+func _on_ak_lute_music_midi_event(data):
+	print_debug("midi")
+	print_debug(data)
